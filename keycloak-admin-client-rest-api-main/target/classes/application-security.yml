@@ -1,0 +1,13 @@
+keycloak:
+  securityConstraints:
+    - authRoles:
+        - APP_OPERATOR
+      securityCollections:
+        - name: operator
+          methods:
+            - PUT
+            - DELETE
+            - GET
+            - POST
+          patterns:
+            - /api/*
