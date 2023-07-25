@@ -1,7 +1,0 @@
-metadata:
-  annotations:
-    api.service.kubernetes.io/path: /services/hello
-spec:
-  ports:
-    - port: 80
-      targetPort: 8080
