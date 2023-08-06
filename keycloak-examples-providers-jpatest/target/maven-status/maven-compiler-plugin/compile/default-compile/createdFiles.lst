@@ -1,4 +1,4 @@
-org/keycloak/examples/rest/EventEntity.class
-org/keycloak/examples/rest/HelloResourceProvider.class
-org/keycloak/examples/rest/HelloResourceProviderFactory.class
-org/keycloak/examples/rest/showJpa.class
+org/keycloak/examples/rest/rest/HelloResourceProvider.class
+org/keycloak/examples/rest/jpa/MyJpaEventProvider.class
+org/keycloak/examples/rest/rest/HelloResourceProviderFactory.class
+org/keycloak/examples/rest/rest/HelloRestResource.class

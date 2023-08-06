@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Specification-Title: Domain Extension Example
+Specification-Version: 18.0
+Specification-Vendor: JBoss by Red Hat
+Implementation-Title: Domain Extension Example
+Implementation-Version: 18.0.2
+Implementation-Vendor: JBoss by Red Hat
+Created-By: Maven Integration for Eclipse
+Implementation-URL: http://keycloak.org/keycloak-examples-parent/keycloa
+ k-examples-providers-parent/keycloak-examples-providers-domain-extensio
+ n
+Java-Vendor: Eclipse Adoptium
+Java-Version: 17.0.7
+Os-Arch: x86_64
+Os-Name: Mac OS X
+Os-Version: 10.12.6
+Scm-Connection: scm:git:git://github.com/keycloak/keycloak.git/keycloak-
+ examples-parent/keycloak-examples-providers-parent/keycloak-examples-pr
+ oviders-domain-extension
+Scm-Revision: 
+Scm-Url: https://github.com/keycloak/keycloak/tree/master/keycloak-examp
+ les-parent/keycloak-examples-providers-parent/keycloak-examples-provide
+ rs-domain-extension/
+

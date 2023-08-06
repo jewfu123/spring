@@ -1,0 +1,16 @@
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/CompanyRepresentation.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/rest/ExampleRestResource.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/spi/ExampleService.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/spi/ExampleServiceProviderFactory.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/jpa/ExampleJpaEntityProviderFactory.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/jpa/EventEntity.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/jpa/ExampleJpaEntityProvider.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/rest/CompanyResource.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/jpa/MyJpaEntityProvider.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/spi/ExampleSpi.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/spi/impl/ExampleServiceImpl.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/EventRepresentation.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/spi/impl/ExampleServiceProviderFactoryImpl.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/rest/ExampleRealmResourceProvider.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/jpa/MyJpaEntityProviderFactory.java
+/Users/fuhong/eclipse-workspace/spring/spring/domain-extension/src/main/java/org/keycloak/examples/domainextension/rest/ExampleRealmResourceProviderFactory.java

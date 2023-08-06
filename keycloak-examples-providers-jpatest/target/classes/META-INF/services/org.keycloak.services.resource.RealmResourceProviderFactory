@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-org.keycloak.examples.rest.HelloResourceProviderFactory
+org.keycloak.examples.rest.rest.HelloResourceProviderFactory
