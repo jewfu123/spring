@@ -10,6 +10,7 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
     <class>org.keycloak.examples.rest.jpa.EventEntity</class>
+    <class>org.keycloak.examples.rest.jpa.UserEntity</class>
 
     <properties>
         <!-- Driver JDBC para conexão com o H2database -->

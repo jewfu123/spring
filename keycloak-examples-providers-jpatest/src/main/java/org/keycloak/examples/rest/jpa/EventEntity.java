@@ -1,11 +1,28 @@
 package org.keycloak.examples.rest.jpa;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@NoArgsConstructor
 @Table(name = "EVENT_ENTITY")
 @NamedQueries({
     @NamedQuery(name="getByUid", query="select u from EventEntity u where u.USER_ID = :uid"),
@@ -122,5 +139,13 @@ public class EventEntity {
 		USER_ID = uSER_ID;
 	}
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "user_id")
+	private Collection<EventEntity> evententitys = new ArrayList<>();
+    //private UserEntity userentity;
+	
+//	@OneToMany(cascade = CascadeType.ALL)
+//	@JoinColumn(name = "id")
+//    private Collection<EventEntity> evententitys = new ArrayList<>();
 	
 }
