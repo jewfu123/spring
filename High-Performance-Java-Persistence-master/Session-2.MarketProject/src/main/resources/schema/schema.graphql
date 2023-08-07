@@ -1,0 +1,60 @@
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+#--------------------------------
+
+type Query {
+    allCategories: [Category]
+    allProducts: [Product]
+    category(id: ID!): Category
+    product(id: ID!): Product
+
+}
+#------------------------------
+
+type Mutation {
+
+#------------Category---------------------
+
+    addCategory(name: String!): Category!
+  #  updateCategory(id: ID!, name: String!): Category!
+    deleteCategory(id: ID!): Boolean
+
+#------------Product---------------------
+
+    addProduct(name: String!, slug: String!, image: String, type: String, unit: String, disc_in_pros: Int, price: Int, per_unit: Int, quantity: Int) : Product!
+  #  updateProduct(input: AdjustProduct!) : Product!
+
+}
+
+#------------------------------------------
+type Category{
+    id: ID
+    name: String!
+}
+
+#------------------------------------------
+type Product {
+
+    id: ID!
+    name: String!
+    slug: String!
+    image:String!
+    type: String!
+    unit: String!
+    price: Int!
+    #salePrice: float!
+    disc_in_pros: Int!
+    per_unit: Int!
+    quantity: Int!
+    description:String!
+}
+#------------------------------
+
+
+#--------------------------
+
+#------------------------------
