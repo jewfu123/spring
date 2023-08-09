@@ -1,15 +1,20 @@
 package org.keycloak.examples.rest.jpa;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.Access;
 import javax.persistence.AccessType;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -35,7 +40,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @Entity
 @Table(name="USER_ENTITY")
-public class UserEntity {
+@NamedQueries({
+    @NamedQuery(name="ue_findAll", query="SELECT e FROM UserEntity2 e"),
+})
+public class UserEntity2 implements Serializable {
 	@Id
 	@Column(name="ID", length = 36)
     @Access(AccessType.PROPERTY) // we do this because relationships often fetch id, but not entity.  This avoids an extra SQL
@@ -69,11 +77,11 @@ public class UserEntity {
     @Column(name = "REALM_ID")
     protected String realmId;
     
-    @Column(name = "SERVICE_ACCOUNT")
-    protected boolean serviceAccount;
+    @Column(name = "SERVICE_ACCOUNT_CLIENT_LINK")
+    protected String serviceAccount;
     
     @Column(name = "NOT_BEFORE")
-    protected boolean notBefore;
+    protected int notBefore;
     
 //    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true, mappedBy="user")
 //    @Fetch(FetchMode.SELECT)
@@ -82,8 +90,16 @@ public class UserEntity {
 //    private UserEntity userentity;
 //    //protected Collection<UserEventEntity> userevents;
     
+//    @OneToMany(mappedBy = "userentity", fetch = FetchType.LAZY)
+//    private List<UserEntity> evententity;
+//    
+//    public UserEntity(String s, String santideva, String sdfs) {
+//        super();
+//    }
+    
+    /*
     @OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id")
     private Collection<EventEntity> evententitys = new ArrayList<>();
-
+	*/
 }

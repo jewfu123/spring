@@ -29,9 +29,9 @@ import org.keycloak.models.KeycloakSessionFactory;
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>
  */
-public class MyJpaEventStoreProviderFactory implements JpaEntityProviderFactory {
+public class MyJpaEventStoreProviderFactory2 implements JpaEntityProviderFactory {
 
-    public static final String ID = "jpa";
+    public static final String ID = "jpa2";
     private int maxDetailLength;
 
 //    @Override
@@ -42,29 +42,29 @@ public class MyJpaEventStoreProviderFactory implements JpaEntityProviderFactory 
     
     @Override
     public JpaEntityProvider create(KeycloakSession session) {
-    	System.out.println("***** JPA MyJpaFactory create() ****** ");
-        return new MyJpaEventProvider();
+    	System.out.println("***** JPA MyJpaFactory2 create() ****** ");
+        return new MyJpaEventProvider2();
     }
 
     @Override
     public void init(Config.Scope config) {
-    	System.out.println("***** JPA MyJpaFactory init(Config.Scope config) ****** ");
+    	System.out.println("***** JPA MyJpaFactory2 init(Config.Scope config) ****** ");
         maxDetailLength = config.getInt("max-detail-length", 0);
     }
 
     @Override
     public void postInit(KeycloakSessionFactory factory) {
-    	System.out.println("***** JPA MyJpaFactory postInit() ****** ");
+    	System.out.println("***** JPA MyJpaFactory2 postInit() ****** ");
     }
 
     @Override
     public void close() {
-    	System.out.println("***** JPA MyJpaFactory close() ****** ");
+    	System.out.println("***** JPA MyJpaFactory2 close() ****** ");
     }
 
     @Override
     public String getId() {
-    	System.out.println("***** JPA MyJpaFactory getId() ****** ");
+    	System.out.println("***** JPA MyJpaFactory2 getId() ****** ");
         return ID;
     }
 

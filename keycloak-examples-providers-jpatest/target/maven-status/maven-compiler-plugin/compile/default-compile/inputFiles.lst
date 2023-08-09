@@ -1,13 +1,15 @@
-/Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/MyJpaEventStoreProvider.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/MyJpaEventProvider.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/spi/JpaEntityProviderFactory.java
+/Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/MyJpaEventProvider2.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/rest/HelloRestResource.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/MyJpaEventStoreProviderFactory.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/spi/JpaEntitySpi.java
+/Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/UserEntity.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/rest/HelloResourceProvider.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/spi/impl/MyServiceImpl.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/spi/impl/MyServiceProviderFactoryImpl.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/rest/HelloResourceProviderFactory.java
+/Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/UserAttribute.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/EventEntity.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/jpa/MyJpaEventStoreProviderFactory2.java
 /Users/fuhong/eclipse-workspace/keycloak-examples-providers-jpatest/src/main/java/org/keycloak/examples/rest/EventRepresentation.java

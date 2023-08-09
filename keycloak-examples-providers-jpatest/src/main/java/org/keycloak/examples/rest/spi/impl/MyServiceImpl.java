@@ -20,6 +20,7 @@ package org.keycloak.examples.rest.spi.impl;
 import org.keycloak.connections.jpa.JpaConnectionProvider;
 import org.keycloak.examples.rest.EventRepresentation;
 import org.keycloak.examples.rest.jpa.EventEntity;
+import org.keycloak.examples.rest.jpa.UserEntity2;
 import org.keycloak.examples.rest.spi.MyService;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
@@ -59,6 +60,10 @@ public class MyServiceImpl implements MyService {
     	//List<EventEntity> companyEntities = getEntityManager().createNamedQuery("findAll", EventEntity.class)
     	List<EventEntity> companyEntities = getEntityManager().createNamedQuery("findAll", EventEntity.class).getResultList();
     	
+    	List<UserEntity2> userEntities = getEntityManager().createNamedQuery("ue_findAll", UserEntity2.class).getResultList();
+    	System.out.println("-------------------------->");
+    	System.out.println(userEntities.toString());
+    	System.out.println("------------------ 888 -------->");
 //                .setParameter("realmId", getRealm().getId())
 //                .getResultList();
     	System.out.println(companyEntities.toString());
