@@ -12,6 +12,7 @@
     <class>org.keycloak.examples.rest.jpa.EventEntity</class>
     <class>org.keycloak.examples.rest.jpa.UserEntity2</class>
     <!-- <class>org.keycloak.examples.rest.jpa.UserAttribute</class> -->
+    <!-- <class>org.keycloak.examples.rest.jpa.UserAttribute</class> -->
 
     <properties>
         <!-- Driver JDBC para conexão com o H2database -->

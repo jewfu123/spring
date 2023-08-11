@@ -19,6 +19,7 @@ package org.keycloak.examples.rest.spi.impl;
 
 import org.keycloak.connections.jpa.JpaConnectionProvider;
 import org.keycloak.examples.rest.EventRepresentation;
+import org.keycloak.examples.rest.EventUserRepresentation;
 import org.keycloak.examples.rest.jpa.EventEntity;
 import org.keycloak.examples.rest.jpa.UserEntity2;
 import org.keycloak.examples.rest.spi.MyService;
@@ -55,7 +56,7 @@ public class MyServiceImpl implements MyService {
     }
     
     @Override
-    public List<EventRepresentation> listEvents() {
+    public List<EventUserRepresentation> listEvents() {
     	System.out.println("-- ExampleServiceImpl -- List<EventRepresentation> listCompanies() ---------");
     	//List<EventEntity> companyEntities = getEntityManager().createNamedQuery("findAll", EventEntity.class)
     	List<EventEntity> companyEntities = getEntityManager().createNamedQuery("findAll", EventEntity.class).getResultList();
@@ -66,10 +67,20 @@ public class MyServiceImpl implements MyService {
     	System.out.println("------------------ 888 -------->");
 //                .setParameter("realmId", getRealm().getId())
 //                .getResultList();
-    	System.out.println(companyEntities.toString());
-        List<EventRepresentation> result = new LinkedList<>();
+    	//System.out.println(companyEntities.toString());
+        ///List<EventRepresentation> result = new LinkedList<>();
+    	List<EventUserRepresentation> result = new LinkedList<>();
         for (EventEntity entity : companyEntities) {
-            result.add(new EventRepresentation(entity));
+        	System.out.println(entity.toString());
+        	for (UserEntity2 ueet : userEntities) {
+        		System.out.println(ueet.getUsername());
+        		System.out.println(ueet.getFirstName());
+        		if (ueet.getId().equals(entity.getUSER_ID())) {
+        			System.out.println("----- !!!!!!!!! ----------- !!!!!!!! selected ----- !!!!!!!!! ----------- !!!!!!!!");
+        			result.add(new EventUserRepresentation(entity, ueet));
+        		}
+        	}
+            ///result.add(new EventRepresentation(entity));
         }
         return result;
     }

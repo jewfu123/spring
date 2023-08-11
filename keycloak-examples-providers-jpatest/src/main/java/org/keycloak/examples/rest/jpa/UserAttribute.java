@@ -4,7 +4,9 @@ import java.util.Collection;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -33,4 +35,12 @@ public class UserAttribute {
 	@ManyToOne(cascade = CascadeType.ALL)
     private EventEntity eventEntity;
 	*/
+	
+//	@ManyToOne(fetch= FetchType.LAZY)
+//    @JoinColumn(name = "USER_ID")
+//    protected UserEntity2 user;
+	
+//	@ManyToOne
+//    @JoinColumn(name = "USER_ID")
+//    protected UserEntity2 user;
 }

@@ -28,7 +28,7 @@ public class MyJpaEventProvider2 implements JpaEntityProvider {
 	@Override
 	public String getFactoryId() {
 		System.out.println("***** --- JPA MyJpaProvider2 getFactoryId() ****** ");
-		return MyJpaEventStoreProviderFactory.ID;
+		return MyJpaEventStoreProviderFactory2.ID;
 	}
 
 }

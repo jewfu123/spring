@@ -5,12 +5,13 @@ import java.util.List;
 import java.util.Vector;
 
 import org.keycloak.examples.rest.EventRepresentation;
+import org.keycloak.examples.rest.EventUserRepresentation;
 import org.keycloak.provider.Provider;
 
 public interface MyService extends Provider {
 
 	List<Class<?>> getEntities();
-	List<EventRepresentation> listEvents();
+	List<EventUserRepresentation> listEvents();
 	
 	String getChangelogLocation();
 	

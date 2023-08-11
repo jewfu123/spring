@@ -16,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.jboss.resteasy.annotations.cache.NoCache;
 import org.keycloak.examples.rest.EventRepresentation;
+import org.keycloak.examples.rest.EventUserRepresentation;
 import org.keycloak.examples.rest.spi.MyService;
 import org.keycloak.models.KeycloakSession;
 
@@ -31,7 +32,7 @@ public class HelloRestResource {
     @Path("/listall")
     @NoCache
     @Produces(MediaType.APPLICATION_JSON)
-    public List<EventRepresentation> getCompanies() {
+    public List<EventUserRepresentation> getCompanies() {
 		System.out.println("------ HelloResource ============ ---> getCompanies() get session:" + session);
         return session.getProvider(MyService.class).listEvents();
     }

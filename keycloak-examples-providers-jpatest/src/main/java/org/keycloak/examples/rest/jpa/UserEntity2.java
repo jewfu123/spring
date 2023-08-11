@@ -17,6 +17,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
@@ -39,7 +40,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="USER_ENTITY")
+@Table(name="USER_ENTITY", uniqueConstraints = {
+		@UniqueConstraint(columnNames = {"ID"})
+})
 @NamedQueries({
     @NamedQuery(name="ue_findAll", query="SELECT e FROM UserEntity2 e"),
 })
@@ -82,6 +85,16 @@ public class UserEntity2 implements Serializable {
     
     @Column(name = "NOT_BEFORE")
     protected int notBefore;
+    
+//    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true, mappedBy="user")
+//    @Fetch(FetchMode.SELECT)
+//    @BatchSize(size = 20)
+//    protected Collection<UserAttribute> attributes;
+    
+//    @OneToMany(mappedBy="user")
+//    @Fetch(FetchMode.SELECT)
+//    @BatchSize(size = 20)
+//    protected Collection<UserAttribute> attributes;
     
 //    @OneToMany(cascade = CascadeType.REMOVE, orphanRemoval = true, mappedBy="user")
 //    @Fetch(FetchMode.SELECT)

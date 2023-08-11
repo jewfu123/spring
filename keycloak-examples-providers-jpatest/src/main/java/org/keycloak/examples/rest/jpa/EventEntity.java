@@ -11,6 +11,9 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,9 +23,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 
 @NoArgsConstructor
 @Table(name = "EVENT_ENTITY")
