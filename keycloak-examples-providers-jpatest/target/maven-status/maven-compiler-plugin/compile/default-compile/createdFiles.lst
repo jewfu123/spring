@@ -1,5 +1,6 @@
 org/keycloak/examples/rest/jpa/MyJpaEventProvider3.class
 org/keycloak/examples/rest/rest/HelloResourceProvider.class
+org/keycloak/examples/rest/UserEntityPresentation.class
 org/keycloak/examples/rest/spi/MyService.class
 org/keycloak/examples/rest/jpa/MyJpaEventProvider.class
 org/keycloak/examples/rest/jpa/MyJpaEventStoreProviderFactory2.class
