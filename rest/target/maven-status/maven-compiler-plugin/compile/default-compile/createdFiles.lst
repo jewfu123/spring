@@ -1,0 +1,5 @@
+org/keycloak/examples/rest/EventEntity.class
+org/keycloak/examples/rest/HelloResourceProvider.class
+org/keycloak/examples/rest/HelloResourceProviderFactory.class
+org/keycloak/examples/rest/UserEntityPresentation.class
+org/keycloak/examples/rest/EventRepresentation.class
