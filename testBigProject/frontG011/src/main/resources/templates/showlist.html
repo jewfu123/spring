@@ -1,0 +1,19 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>show list</title></head>
+<body>
+<h1>Show List</h1>
+    <span>------------------------</span>
+    <ul>
+        <li th:each="entry : ${showBody}">
+            ID=[[${entry.ID}]] ---- 
+            NAME=[[${entry.NAME}]] ---- 
+            PARENT_ID=[[${entry.PARENT_ID}]] ---- 
+            PROVIDER_ID=[[${entry.PROVIDER_ID}]] ---- 
+            PROVIDER_TYPE=[[${entry.PROVIDER_TYPE}]] ---- 
+            REALM_ID=[[${entry.REALM_ID}]] ---- 
+            SUB_TYPE=[[${entry.SUB_TYPE}]] ---- :)
+        </li>
+    </ul>
+</body>
+</html>

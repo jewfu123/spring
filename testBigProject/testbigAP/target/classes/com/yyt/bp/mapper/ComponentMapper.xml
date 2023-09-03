@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="com.yyt.bp.mapper.ComponentMapper">
+
+	<!--
+        id：唯一标识
+        type：映射的类型，支持别名
+    -->
+    <resultMap id="componentResultMap" type="component">
+        <!--
+            id：完成主键字段的映射
+                column：表的列名
+                property：实体类的属性名
+            result：完成一般字段的映射
+                column：表的列名
+                property：实体类的属性名
+        -->
+        <result column="PARENT_ID" property="PARENTID"/>
+    </resultMap>
+     
+    <select id="selectAll" resultMap="componentResultMap">
+        select *
+        from COMPONENT;
+    </select>
+    
+    <select id="selectById" resultMap="componentResultMap">
+        select *
+        from COMPONENT
+        where ID
+         <![CDATA[
+            =
+         ]]>
+         #{id};
+
+    </select>
+    
+    <insert id="add">
+        insert into COMPONENT (ID, NAME, PARENT_ID, PROVIDER_ID, PROVIDER_TYPE, REALM_ID, SUB_TYPE)
+        values (#{ID}, #{NAME}, #{PARENT_ID}, #{PROVIDER_ID}, #{PROVIDER_TYPE}, #{REALM_ID}, #{SUB_TYPE});
+ 	</insert>
+</mapper>
