@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://developers.google.com/recaptcha/docs/verify?hl=zh-cn -->
+<html lang="zh-CN-x-mtfrom-en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award">
+    <meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="robots" content="noindex"><meta name="theme-color" content="#1a73e8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="https://developers.google.com/_pwa/developers/manifest.json" crossorigin="use-credentials">
+    <link rel="preconnect" href="https://www.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="">
+    <link rel="preconnect" href="https://apis.google.com/" crossorigin="">
+    <link rel="preconnect" href="https://www.google-analytics.com/" crossorigin=""><link rel="stylesheet" href="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/css">
+      <link rel="stylesheet" href="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/css2"><link rel="stylesheet" href="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn"><link rel="search" type="application/opensearchdescription+xml" title="Google for Developers" href="https://developers.google.com/s/opensearch.xml?hl=zh-cn">
+      <link rel="alternate" hreflang="en" href="https://developers.google.com/recaptcha/docs/verify"><link rel="alternate" hreflang="x-default" href="https://developers.google.com/recaptcha/docs/verify"><link rel="alternate" hreflang="ar" href="https://developers.google.com/recaptcha/docs/verify?hl=ar"><link rel="alternate" hreflang="bn" href="https://developers.google.com/recaptcha/docs/verify?hl=bn"><link rel="alternate" hreflang="zh-Hans" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn"><link rel="alternate" hreflang="zh-Hant" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-tw"><link rel="alternate" hreflang="fa" href="https://developers.google.com/recaptcha/docs/verify?hl=fa"><link rel="alternate" hreflang="fr" href="https://developers.google.com/recaptcha/docs/verify?hl=fr"><link rel="alternate" hreflang="de" href="https://developers.google.com/recaptcha/docs/verify?hl=de"><link rel="alternate" hreflang="he" href="https://developers.google.com/recaptcha/docs/verify?hl=he"><link rel="alternate" hreflang="hi" href="https://developers.google.com/recaptcha/docs/verify?hl=hi"><link rel="alternate" hreflang="id" href="https://developers.google.com/recaptcha/docs/verify?hl=id"><link rel="alternate" hreflang="it" href="https://developers.google.com/recaptcha/docs/verify?hl=it"><link rel="alternate" hreflang="ja" href="https://developers.google.com/recaptcha/docs/verify?hl=ja"><link rel="alternate" hreflang="ko" href="https://developers.google.com/recaptcha/docs/verify?hl=ko"><link rel="alternate" hreflang="pl" href="https://developers.google.com/recaptcha/docs/verify?hl=pl"><link rel="alternate" hreflang="pt-BR" href="https://developers.google.com/recaptcha/docs/verify?hl=pt-br"><link rel="alternate" hreflang="ru" href="https://developers.google.com/recaptcha/docs/verify?hl=ru"><link rel="alternate" hreflang="es-419" href="https://developers.google.com/recaptcha/docs/verify?hl=es-419"><link rel="alternate" hreflang="th" href="https://developers.google.com/recaptcha/docs/verify?hl=th"><link rel="alternate" hreflang="tr" href="https://developers.google.com/recaptcha/docs/verify?hl=tr"><link rel="alternate" hreflang="vi" href="https://developers.google.com/recaptcha/docs/verify?hl=vi"><title>
+    验证用户的响应
+  
+ &nbsp;|&nbsp; reCAPTCHA &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="
+    验证用户的响应
+  
+  |  reCAPTCHA  |  Google for Developers"><meta property="og:url" content="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/opengraph/google-blue.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="zh_cn"><meta name="twitter:card" content="summary_large_image"><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/cb=gapi.loaded_1" nonce="" async=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/cb=gapi.loaded_0" nonce="" async=""></script><script type="text/javascript" async="" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/js" nonce=""></script><script type="text/javascript" async="" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/linkid.js" nonce=""></script><script async="" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/js(1)" nonce=""></script><script async="" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/app_loader.js"></script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "
+    验证用户的响应
+  
+"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "reCAPTCHA",
+      "item": "https://developers.google.com/recaptcha"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "
+    验证用户的响应
+  
+",
+      "item": "https://developers.google.com/recaptcha/docs/verify"
+    }]
+  }
+  </script>
+  <meta name="xsrf_token" content="1A4x1Pd3zzxsl_cFBdFS2B6vA3Vnl_IukjzPjA6kpIA6MTY5Mzc3NDc1NTgxMDIyNw">
+  
+
+  <meta name="session_expiry" content="0"><link rel="alternate machine-translated-from" hreflang="en" href="https://developers.google.com/recaptcha/docs/verify?hl=en">
+  
+
+  
+
+  
+
+
+    
+      <link rel="stylesheet" href="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/extras.css"><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_app_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_app_custom_elements_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_a11y_announce_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_analytics_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_badger_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_book_nav_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_bookmark_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_code_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_content_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_feature_tooltip_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_footer_linkboxes_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_footer_promos_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_footer_utility_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_header_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_heading_link_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_language_selector_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_notification_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_panel_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_progress_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_recommendations_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_recommendations_dropdown_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_recommendations_sidebar_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_search_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_sitemask_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_snackbar_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_tabs_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_thumb_rating_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_toc_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_tooltip_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_user_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_view_release_notes_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/analytics.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_badge_awarded_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_dialog_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_fast_track_profile_creator_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_feedback_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_spinner_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_mwc_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_dropdown_list_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_view_release_notes_dialog_module__zh_cn.js" nonce=""></script><script src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/devsite_devsite_checkbox_module__zh_cn.js" nonce=""></script><style type="text/css">.gb_8a:not(.gb_ad){font:13px/27px Roboto,Arial,sans-serif;z-index:986}@-webkit-keyframes gb__a{0%{opacity:0}50%{opacity:1}}@keyframes gb__a{0%{opacity:0}50%{opacity:1}}a.gb_pa{border:none;color:#4285f4;cursor:default;font-weight:bold;outline:none;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;white-space:nowrap;-webkit-user-select:none}a.gb_pa:hover:after,a.gb_pa:focus:after{background-color:rgba(0,0,0,.12);content:"";height:100%;left:0;position:absolute;top:0;width:100%}a.gb_pa:hover,a.gb_pa:focus{text-decoration:none}a.gb_pa:active{background-color:rgba(153,153,153,.4);text-decoration:none}a.gb_qa{background-color:#4285f4;color:#fff}a.gb_qa:active{background-color:#0043b2}.gb_ra{box-shadow:0 1px 1px rgba(0,0,0,.16)}.gb_pa,.gb_qa,.gb_sa,.gb_ta{display:inline-block;line-height:28px;padding:0 12px;border-radius:2px}.gb_sa{background:#f8f8f8;border:1px solid #c6c6c6}.gb_ta{background:#f8f8f8}.gb_sa,#gb a.gb_sa.gb_sa,.gb_ta{color:#666;cursor:default;text-decoration:none}#gb a.gb_ta{cursor:default;text-decoration:none}.gb_ta{border:1px solid #4285f4;font-weight:bold;outline:none;background:#4285f4;background:-webkit-gradient(linear,left top,left bottom,from(top),color-stop(#4387fd),to(#4683ea));background:-webkit-linear-gradient(top,#4387fd,#4683ea);background:linear-gradient(top,#4387fd,#4683ea);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4387fd,endColorstr=#4683ea,GradientType=0)}#gb a.gb_ta{color:#fff}.gb_ta:hover{box-shadow:0 1px 0 rgba(0,0,0,.15)}.gb_ta:active{box-shadow:inset 0 2px 0 rgba(0,0,0,.15);background:#3c78dc;background:-webkit-gradient(linear,left top,left bottom,from(top),color-stop(#3c7ae4),to(#3f76d3));background:-webkit-linear-gradient(top,#3c7ae4,#3f76d3);background:linear-gradient(top,#3c7ae4,#3f76d3);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#3c7ae4,endColorstr=#3f76d3,GradientType=0)}#gb .gb_ua{background:#fff;border:1px solid #dadce0;color:#1a73e8;display:inline-block;text-decoration:none}#gb .gb_ua:hover{background:#f8fbff;border-color:#dadce0;color:#174ea6}#gb .gb_ua:focus{background:#f4f8ff;color:#174ea6;outline:1px solid #174ea6}#gb .gb_ua:active,#gb .gb_ua:focus:active{background:#ecf3fe;color:#174ea6}#gb .gb_ua.gb_j{background:transparent;border:1px solid #5f6368;color:#8ab4f8;text-decoration:none}#gb .gb_ua.gb_j:hover{background:rgba(255,255,255,.04);color:#e8eaed}#gb .gb_ua.gb_j:focus{background:rgba(232,234,237,.12);color:#e8eaed;outline:1px solid #e8eaed}#gb .gb_ua.gb_j:active,#gb .gb_ua.gb_j:focus:active{background:rgba(232,234,237,.1);color:#e8eaed}.gb_p{display:none!important}.gb_Sa{visibility:hidden}.gb_Hd{display:inline-block;vertical-align:middle}.gb_Jd .gb_o{bottom:-3px;right:-5px}.gb_g{position:relative}.gb_d{display:inline-block;outline:none;vertical-align:middle;border-radius:2px;box-sizing:border-box;height:40px;width:40px;cursor:pointer;text-decoration:none}#gb#gb a.gb_d{cursor:pointer;text-decoration:none}.gb_d,a.gb_d{color:#000}.gb_8e{border-color:transparent;border-bottom-color:#fff;border-style:dashed dashed solid;border-width:0 8.5px 8.5px;display:none;position:absolute;left:11.5px;top:33px;z-index:1;height:0;width:0;-webkit-animation:gb__a .2s;animation:gb__a .2s}.gb_9e{border-color:transparent;border-style:dashed dashed solid;border-width:0 8.5px 8.5px;display:none;position:absolute;left:11.5px;z-index:1;height:0;width:0;-webkit-animation:gb__a .2s;animation:gb__a .2s;border-bottom-color:rgba(0,0,0,.2);top:32px}x:-o-prefocus,div.gb_9e{border-bottom-color:#ccc}.gb_W{background:#fff;border:1px solid #ccc;border-color:rgba(0,0,0,.2);color:#000;-webkit-box-shadow:0 2px 10px rgba(0,0,0,.2);box-shadow:0 2px 10px rgba(0,0,0,.2);display:none;outline:none;overflow:hidden;position:absolute;right:8px;top:62px;-webkit-animation:gb__a .2s;animation:gb__a .2s;border-radius:2px;-webkit-user-select:text}.gb_Hd.gb_Ca .gb_8e,.gb_Hd.gb_Ca .gb_9e,.gb_Hd.gb_Ca .gb_W,.gb_Ca.gb_W{display:block}.gb_Hd.gb_Ca.gb_af .gb_8e,.gb_Hd.gb_Ca.gb_af .gb_9e{display:none}.gb_Kd{position:absolute;right:8px;top:62px;z-index:-1}.gb_Za .gb_8e,.gb_Za .gb_9e,.gb_Za .gb_W{margin-top:-10px}.gb_Hd:first-child,#gbsfw:first-child+.gb_Hd{padding-left:4px}.gb_Ha.gb_Ld .gb_Hd:first-child{padding-left:0}.gb_Md{position:relative}.gb_Ha .gb_Nd .gb_Ed.gb_dd,.gb_Ha.gb_Ia .gb_Nd .gb_Ed.gb_dd{padding:3px 8px 3px 16px}.gb_Nd .gb_Od{display:inline-block}.gb_Nd .gb_dd{-webkit-border-radius:100px;border-radius:100px;background:#0b57d0;color:#fff;font-size:14px;font-weight:500;white-space:nowrap;width:auto}.gb_Nd .gb_Pd{-webkit-box-align:center;-webkit-align-items:center;-webkit-align-items:center;align-items:center;display:-webkit-inline-box;display:-webkit-inline-flex;display:-webkit-inline-box;display:-webkit-inline-flex;display:inline-flex}.gb_Nd .gb_u{fill:#0b57d0;margin-left:8px}.gb_Nd .gb_u circle{fill:#fff}.gb_Nd .gb_dd .gb_Ad{-webkit-box-flex:1;-webkit-flex-grow:1;-webkit-box-flex:1;box-flex:1;-webkit-flex-grow:1;flex-grow:1;text-align:center}.gb_Nd .gb_dd:hover{background:#3763cd}.gb_Nd .gb_dd:hover .gb_u{fill:#3763cd}.gb_Nd .gb_dd:focus,.gb_Nd .gb_dd:active,.gb_Nd .gb_dd:focus:hover,.gb_Nd .gb_dd[aria-expanded=true],.gb_Nd .gb_dd:hover[aria-expanded=true]{background:#416acf}.gb_Nd .gb_dd:focus .gb_u,.gb_Nd .gb_dd:active .gb_u,.gb_Nd .gb_dd:focus:hover .gb_u,.gb_Nd .gb_dd[aria-expanded=true] .gb_u,.gb_Nd .gb_dd:hover[aria-expanded=true] .gb_u{fill:#416acf}.gb_Nd .gb_dd:hover,.gb_Nd .gb_dd:focus,.gb_Nd .gb_dd:active,.gb_Nd .gb_dd[aria-expanded=true]{-webkit-box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3)}.gb_Nd .gb_dd:focus-visible{outline:1px solid #416acf;outline-offset:2px}.gb_Nd .gb_j.gb_dd{background:#a8c7fa;color:#062e6f}.gb_Nd .gb_j.gb_dd .gb_u{fill:#a8c7fa}.gb_Nd .gb_j.gb_dd .gb_u circle{fill:#062e6f}.gb_Nd .gb_j.gb_dd:hover{background:#b4cbf6}.gb_Nd .gb_j.gb_dd:hover .gb_u{fill:#b4cbf6}.gb_Nd .gb_j.gb_dd:focus,.gb_Nd .gb_j.gb_dd:focus:hover,.gb_Nd .gb_j.gb_dd:active,.gb_Nd .gb_j.gb_dd[aria-expanded=true],.gb_Nd .gb_j.gb_dd:hover[aria-expanded=true]{background:#b8cdf7}.gb_Nd .gb_j.gb_dd:focus .gb_u,.gb_Nd .gb_j.gb_dd:focus:hover .gb_u,.gb_Nd .gb_j.gb_dd:active .gb_u,.gb_Nd .gb_j.gb_dd[aria-expanded=true] .gb_u,.gb_Nd .gb_j.gb_dd:hover[aria-expanded=true] .gb_u{fill:#b8cdf7}.gb_Nd .gb_j.gb_dd:focus-visible{outline-color:#b8cdf7}.gb_Nd .gb_j.gb_dd:hover,.gb_Nd .gb_j.gb_dd:focus,.gb_Nd .gb_j.gb_dd:active,.gb_Nd .gb_j.gb_dd[aria-expanded=true]{-webkit-box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3)}.gb_Wc .gb_Md,.gb_f .gb_Md{float:right}.gb_d{padding:8px;cursor:pointer}.gb_d:after{content:"";position:absolute;top:-4px;bottom:-4px;left:-4px;right:-4px}.gb_Ha .gb_de:not(.gb_pa):focus img{background-color:rgba(0,0,0,.2);outline:none;-webkit-border-radius:50%;border-radius:50%}.gb_Qd button svg,.gb_d{-webkit-border-radius:50%;border-radius:50%}.gb_Qd button:focus:not(:focus-visible) svg,.gb_Qd button:hover svg,.gb_Qd button:active svg,.gb_d:focus:not(:focus-visible),.gb_d:hover,.gb_d:active,.gb_d[aria-expanded=true]{outline:none}.gb_Fc .gb_Qd.gb_me button:focus-visible svg,.gb_Qd button:focus-visible svg,.gb_d:focus-visible{outline:1px solid #202124}.gb_Fc .gb_Qd button:focus-visible svg,.gb_Fc .gb_d:focus-visible{outline:1px solid #f1f3f4}@media (forced-colors:active){.gb_Fc .gb_Qd.gb_me button:focus-visible svg,.gb_Qd button:focus-visible svg,.gb_Fc .gb_Qd button:focus-visible svg{outline:1px solid currentcolor}}.gb_Fc .gb_Qd.gb_me button:focus svg,.gb_Fc .gb_Qd.gb_me button:focus:hover svg,.gb_Qd button:focus svg,.gb_Qd button:focus:hover svg,.gb_d:focus,.gb_d:focus:hover{background-color:rgba(60,64,67,.1)}.gb_Fc .gb_Qd.gb_me button:active svg,.gb_Qd button:active svg,.gb_d:active{background-color:rgba(60,64,67,.12)}.gb_Fc .gb_Qd.gb_me button:hover svg,.gb_Qd button:hover svg,.gb_d:hover{background-color:rgba(60,64,67,.08)}.gb_va .gb_d.gb_xa:hover{background-color:transparent}.gb_d[aria-expanded=true],.gb_d:hover[aria-expanded=true]{background-color:rgba(95,99,104,.24)}.gb_d[aria-expanded=true] .gb_i{fill:#5f6368;opacity:1}.gb_Fc .gb_Qd button:hover svg,.gb_Fc .gb_d:hover{background-color:rgba(232,234,237,.08)}.gb_Fc .gb_Qd button:focus svg,.gb_Fc .gb_Qd button:focus:hover svg,.gb_Fc .gb_d:focus,.gb_Fc .gb_d:focus:hover{background-color:rgba(232,234,237,.1)}.gb_Fc .gb_Qd button:active svg,.gb_Fc .gb_d:active{background-color:rgba(232,234,237,.12)}.gb_Fc .gb_d[aria-expanded=true],.gb_Fc .gb_d:hover[aria-expanded=true]{background-color:rgba(255,255,255,.12)}.gb_Fc .gb_d[aria-expanded=true] .gb_i{fill:#fff;opacity:1}.gb_Hd{padding:4px}.gb_Ha.gb_Ld .gb_Hd{padding:4px 2px}.gb_Ha.gb_Ld .gb_b.gb_Hd{padding-left:6px}.gb_W{z-index:991;line-height:normal}.gb_W.gb_Rd{left:0;right:auto}@media (max-width:350px){.gb_W.gb_Rd{left:0}}.gb_Sd .gb_W{top:56px}.gb_l .gb_d,.gb_V .gb_l .gb_d{background-position:-64px -29px}.gb_B .gb_l .gb_d{background-position:-29px -29px;opacity:1}.gb_l .gb_d,.gb_l .gb_d:hover,.gb_l .gb_d:focus{opacity:1}.gb_bd{display:none}@media screen and (max-width:319px){.gb_id:not(.gb_nd) .gb_l{display:none;visibility:hidden}}.gb_o{display:none}.gb_5c{font-family:Google Sans,Roboto,Helvetica,Arial,sans-serif;font-size:20px;font-weight:400;letter-spacing:0.25px;line-height:48px;margin-bottom:2px;opacity:1;overflow:hidden;padding-left:16px;position:relative;text-overflow:ellipsis;vertical-align:middle;top:2px;white-space:nowrap;-webkit-flex:1 1 auto;-webkit-box-flex:1;flex:1 1 auto}.gb_5c.gb_6c{color:#3c4043}.gb_Ha.gb_Ia .gb_5c{margin-bottom:0}.gb_7c.gb_8c .gb_5c{padding-left:4px}.gb_Ha.gb_Ia .gb_9c{position:relative;top:-2px}.gb_Ha{color:black;min-width:160px;position:relative;-webkit-transition:box-shadow 250ms;transition:box-shadow 250ms}.gb_Ha.gb_Oc{min-width:120px}.gb_Ha.gb_gd .gb_hd{display:none}.gb_Ha.gb_gd .gb_id{height:56px}header.gb_Ha{display:block}.gb_Ha svg{fill:currentColor}.gb_jd{position:fixed;top:0;width:100%}.gb_kd{-webkit-box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);box-shadow:0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)}.gb_ld{height:64px}.gb_id{-webkit-box-sizing:border-box;box-sizing:border-box;position:relative;width:100%;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:space-between;-webkit-justify-content:space-between;justify-content:space-between;min-width:-webkit-min-content;min-width:min-content}.gb_Ha:not(.gb_Ia) .gb_id{padding:8px}.gb_Ha.gb_md .gb_id{-webkit-flex:1 0 auto;-webkit-box-flex:1;flex:1 0 auto}.gb_Ha .gb_id.gb_nd.gb_od{min-width:0}.gb_Ha.gb_Ia .gb_id{padding:4px;padding-left:8px;min-width:0}.gb_hd{height:48px;vertical-align:middle;white-space:nowrap;-webkit-box-align:center;-webkit-align-items:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-user-select:none}.gb_qd>.gb_hd{display:table-cell;width:100%}.gb_7c{padding-right:30px;box-sizing:border-box;-webkit-flex:1 0 auto;-webkit-box-flex:1;flex:1 0 auto}.gb_Ha.gb_Ia .gb_7c{padding-right:14px}.gb_rd{-webkit-flex:1 1 100%;-webkit-box-flex:1;flex:1 1 100%}.gb_rd>:only-child{display:inline-block}.gb_sd.gb_Xc{padding-left:4px}.gb_sd.gb_td,.gb_Ha.gb_md .gb_sd,.gb_Ha.gb_Ia:not(.gb_f) .gb_sd{padding-left:0}.gb_Ha.gb_Ia .gb_sd.gb_td{padding-right:0}.gb_Ha.gb_Ia .gb_sd.gb_td .gb_va{margin-left:10px}.gb_Xc{display:inline}.gb_Ha.gb_Rc .gb_sd.gb_ud,.gb_Ha.gb_f .gb_sd.gb_ud{padding-left:2px}.gb_5c{display:inline-block}.gb_sd{-webkit-box-sizing:border-box;box-sizing:border-box;height:48px;line-height:normal;padding:0 4px;padding-left:30px;-webkit-flex:0 0 auto;-webkit-box-flex:0;flex:0 0 auto;-webkit-box-pack:flex-end;-webkit-justify-content:flex-end;justify-content:flex-end}.gb_f{height:48px}.gb_Ha.gb_f{min-width:auto}.gb_f .gb_sd{float:right;padding-left:32px}.gb_f .gb_sd.gb_vd{padding-left:0}.gb_wd{font-size:14px;max-width:200px;overflow:hidden;padding:0 12px;text-overflow:ellipsis;white-space:nowrap;-webkit-user-select:text}.gb_cd{-webkit-transition:background-color .4s;-webkit-transition:background-color .4s;transition:background-color .4s}.gb_Cd{color:black}.gb_Fc{color:white}.gb_Ha a,.gb_Lc a{color:inherit}.gb_M{color:rgba(0,0,0,.87)}.gb_Ha svg,.gb_Lc svg,.gb_7c .gb_fd,.gb_Wc .gb_fd{color:#5f6368;opacity:1}.gb_Fc svg,.gb_Lc.gb_Pc svg,.gb_Fc .gb_7c .gb_fd,.gb_Fc .gb_7c .gb_Ec,.gb_Fc .gb_7c .gb_9c,.gb_Lc.gb_Pc .gb_fd{color:rgba(255,255,255,.87)}.gb_Fc .gb_7c .gb_Dc:not(.gb_Dd){opacity:.87}.gb_6c{color:inherit;opacity:1;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}.gb_Fc .gb_6c,.gb_Cd .gb_6c{opacity:1}.gb_xd{position:relative}.gb_yd{font-family:arial,sans-serif;line-height:normal;padding-right:15px}a.gb_y,span.gb_y{color:rgba(0,0,0,.87);text-decoration:none}.gb_Fc a.gb_y,.gb_Fc span.gb_y{color:white}a.gb_y:focus{outline-offset:2px}a.gb_y:hover{text-decoration:underline}.gb_z{display:inline-block;padding-left:15px}.gb_z .gb_y{display:inline-block;line-height:24px;vertical-align:middle}.gb_Ed{font-family:Google Sans,Roboto,Helvetica,Arial,sans-serif;font-weight:500;font-size:14px;letter-spacing:.25px;line-height:16px;margin-left:10px;margin-right:8px;min-width:96px;padding:9px 23px;text-align:center;vertical-align:middle;border-radius:4px;box-sizing:border-box}.gb_Ha.gb_f .gb_Ed{margin-left:8px}#gb a.gb_ta.gb_Ed{cursor:pointer}.gb_ta.gb_Ed:hover{background:#1b66c9;-webkit-box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3)}.gb_ta.gb_Ed:focus,.gb_ta.gb_Ed:hover:focus{background:#1c5fba;-webkit-box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3)}.gb_ta.gb_Ed:active{background:#1b63c1;-webkit-box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3);box-shadow:0 1px 3px 1px rgba(66,64,67,.15),0 1px 2px 0 rgba(60,64,67,.3)}.gb_Ed{background:#1a73e8;border:1px solid transparent}.gb_Ha.gb_Ia .gb_Ed{padding:9px 15px;min-width:80px}.gb_zd{text-align:left}#gb .gb_Fc a.gb_Ed:not(.gb_j),#gb.gb_Fc a.gb_Ed:not(.gb_t){background:#fff;border-color:#dadce0;-webkit-box-shadow:none;box-shadow:none;color:#1a73e8}#gb a.gb_ta.gb_j.gb_Ed{background:#8ab4f8;border:1px solid transparent;-webkit-box-shadow:none;box-shadow:none;color:#202124}#gb .gb_Fc a.gb_Ed:hover:not(.gb_j),#gb.gb_Fc a.gb_Ed:not(.gb_t):hover{background:#f8fbff;border-color:#cce0fc}#gb a.gb_ta.gb_j.gb_Ed:hover{background:#93baf9;border-color:transparent;-webkit-box-shadow:0 1px 3px 1px rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.3);box-shadow:0 1px 3px 1px rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.3)}#gb .gb_Fc a.gb_Ed:focus:not(.gb_j),#gb .gb_Fc a.gb_Ed:focus:hover:not(.gb_j),#gb.gb_Fc a.gb_Ed:focus:not(.gb_j),#gb.gb_Fc a.gb_Ed:focus:hover:not(.gb_j){background:#f4f8ff;outline:1px solid #c9ddfc}#gb a.gb_ta.gb_j.gb_Ed:focus,#gb a.gb_ta.gb_j.gb_Ed:focus:hover{background:#a6c6fa;border-color:transparent;-webkit-box-shadow:none;box-shadow:none}#gb .gb_Fc a.gb_Ed:active:not(.gb_j),#gb.gb_Fc a.gb_Ed:not(.gb_t):active{background:#ecf3fe}#gb a.gb_ta.gb_j.gb_Ed:active{background:#a1c3f9;-webkit-box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15);box-shadow:0 1px 2px rgba(60,64,67,.3),0 2px 6px 2px rgba(60,64,67,.15)}.gb_Fd{display:none}@media screen and (max-width:319px){.gb_id:not(.gb_nd) .gb_l{display:none;visibility:hidden}}.gb_va{background-color:rgba(255,255,255,.88);border:1px solid #dadce0;-webkit-box-sizing:border-box;box-sizing:border-box;cursor:pointer;display:inline-block;max-height:48px;overflow:hidden;outline:none;padding:0;vertical-align:middle;width:134px;-webkit-border-radius:8px;border-radius:8px}.gb_va.gb_j{background-color:transparent;border:1px solid #5f6368}.gb_Ba{display:inherit}.gb_va.gb_j .gb_Ba{background:#fff;-webkit-border-radius:4px;border-radius:4px;display:inline-block;left:8px;margin-right:5px;position:relative;padding:3px;top:-1px}.gb_va:hover{border:1px solid #d2e3fc;background-color:rgba(248,250,255,.88)}.gb_va.gb_j:hover{background-color:rgba(241,243,244,.04);border:1px solid #5f6368}.gb_va:focus-visible,.gb_va:focus{background-color:#fff;outline:1px solid #202124;-webkit-box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15);box-shadow:0 1px 2px 0 rgba(60,64,67,.3),0 1px 3px 1px rgba(60,64,67,.15)}.gb_va.gb_j:focus-visible,.gb_va.gb_j:focus{background-color:rgba(241,243,244,.12);outline:1px solid #f1f3f4;-webkit-box-shadow:0 1px 3px 1px rgba(0,0,0,.15),0 1px 2px 0 rgba(0,0,0,.3);box-shadow:0 1px 3px 1px rgba(0,0,0,.15),0 1px 2px 0 rgba(0,0,0,.3)}.gb_va.gb_j:active,.gb_va.gb_Ca.gb_j:focus{background-color:rgba(241,243,244,.1);border:1px solid #5f6368}.gb_Da{display:inline-block;padding-bottom:2px;padding-left:7px;padding-top:2px;text-align:center;vertical-align:middle;line-height:32px;width:78px}.gb_va.gb_j .gb_Da{line-height:26px;margin-left:0;padding-bottom:0;padding-left:0;padding-top:0;width:72px}.gb_Da.gb_Ea{background-color:#f1f3f4;-webkit-border-radius:4px;border-radius:4px;margin-left:8px;padding-left:0;line-height:30px}.gb_Da.gb_Ea .gb_Fa{vertical-align:middle}.gb_Ha:not(.gb_Ia) .gb_va{margin-left:10px;margin-right:4px}.gb_Ja{max-height:32px;width:78px}.gb_va.gb_j .gb_Ja{max-height:26px;width:72px}.gb_n{-webkit-background-size:32px 32px;background-size:32px 32px;border:0;-webkit-border-radius:50%;border-radius:50%;display:block;margin:0px;position:relative;height:32px;width:32px;z-index:0}.gb_Ta{background-color:#e8f0fe;border:1px solid rgba(32,33,36,.08);position:relative}.gb_Ta.gb_n{height:30px;width:30px}.gb_Ta.gb_n:hover,.gb_Ta.gb_n:active{-webkit-box-shadow:none;box-shadow:none}.gb_Ua{background:#fff;border:none;-webkit-border-radius:50%;border-radius:50%;bottom:2px;-webkit-box-shadow:0px 1px 2px 0px rgba(60,64,67,.30),0px 1px 3px 1px rgba(60,64,67,.15);box-shadow:0px 1px 2px 0px rgba(60,64,67,.30),0px 1px 3px 1px rgba(60,64,67,.15);height:14px;margin:2px;position:absolute;right:0;width:14px}.gb_Va{color:#1f71e7;font:400 22px/32px Google Sans,Roboto,Helvetica,Arial,sans-serif;text-align:center;text-transform:uppercase}@media (-webkit-min-device-pixel-ratio:1.25),(min-resolution:1.25dppx),(min-device-pixel-ratio:1.25){.gb_n::before,.gb_Wa::before{display:inline-block;-webkit-transform:scale(0.5);-webkit-transform:scale(0.5);transform:scale(0.5);-webkit-transform-origin:left 0;-webkit-transform-origin:left 0;transform-origin:left 0}.gb_D .gb_Wa::before{-webkit-transform:scale(scale(0.416666667));-webkit-transform:scale(scale(0.416666667));transform:scale(scale(0.416666667))}}.gb_n:hover,.gb_n:focus{-webkit-box-shadow:0 1px 0 rgba(0,0,0,.15);box-shadow:0 1px 0 rgba(0,0,0,.15)}.gb_n:active{-webkit-box-shadow:inset 0 2px 0 rgba(0,0,0,.15);box-shadow:inset 0 2px 0 rgba(0,0,0,.15)}.gb_n:active::after{background:rgba(0,0,0,.1);-webkit-border-radius:50%;border-radius:50%;content:"";display:block;height:100%}.gb_Xa{cursor:pointer;line-height:40px;min-width:30px;opacity:.75;overflow:hidden;vertical-align:middle;text-overflow:ellipsis}.gb_d.gb_Xa{width:auto}.gb_Xa:hover,.gb_Xa:focus{opacity:.85}.gb_Za .gb_Xa,.gb_Za .gb_0a{line-height:26px}#gb#gb.gb_Za a.gb_Xa,.gb_Za .gb_0a{font-size:11px;height:auto}.gb_1a{border-top:4px solid #000;border-left:4px dashed transparent;border-right:4px dashed transparent;display:inline-block;margin-left:6px;opacity:.75;vertical-align:middle}.gb_xa:hover .gb_1a{opacity:.85}.gb_va>.gb_b{padding:3px 3px 3px 4px}.gb_2a.gb_Sa{color:#fff}.gb_B .gb_Xa,.gb_B .gb_1a{opacity:1}#gb#gb.gb_B.gb_B a.gb_Xa,#gb#gb .gb_B.gb_B a.gb_Xa{color:#fff}.gb_B.gb_B .gb_1a{border-top-color:#fff;opacity:1}.gb_V .gb_n:hover,.gb_B .gb_n:hover,.gb_V .gb_n:focus,.gb_B .gb_n:focus{-webkit-box-shadow:0 1px 0 rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.2);box-shadow:0 1px 0 rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.2)}.gb_3a .gb_b,.gb_4a .gb_b{position:absolute;right:1px}.gb_b.gb_A,.gb_5a.gb_A,.gb_xa.gb_A{-webkit-flex:0 1 auto;-webkit-box-flex:0;flex:0 1 auto}.gb_6a.gb_7a .gb_Xa{width:30px!important}.gb_m{height:40px;position:absolute;right:-5px;top:-5px;width:40px}.gb_8a .gb_m,.gb_9a .gb_m{right:0;top:0}.gb_b .gb_d{padding:4px}.gb_q{display:none}sentinel{}</style><script id="ogb-head-script">;this.gbar_={CONFIG:[[[0,"www.gstatic.com","og.qtm.en_US.GAa-2MwnVzE.2019.O","co.jp","en","331",0,[4,2,"","","","560569280","0"],null,"pvP0ZM7-Bs2gp84P0a6rmAM",null,0,"og.qtm.cQMpi_fC13c.L.W.O","AA2YrTs1EAyibfMuv084JcTDqRqNnSIc2g","AA2YrTtUabOIm7e_T7ppdWRFhU42GSd0lQ","",2,1,200,"JPN",null,null,"18","331",1],null,[1,0.1000000014901161,2,1],[1,0.001000000047497451,1],[1,0,0,null,"0","jewishfu@gmail.com","","ADRvXp1vgcdW7zhvlNt2HsvepXCvUQD_WvJArVaFXWN83Q7e4Zq_yL7b-4Q68CprUdgAj63ShipAZED68uZXeO7SU3HgsIieSg",0,0,0],[0,0,"",1,0,0,0,0,0,0,null,0,0,null,0,0,null,null,0,0,0,"","","","","","",null,0,0,0,0,0,null,null,null,"rgba(32,33,36,1)","rgba(255,255,255,1)",0,0,0,null,null,1,0,0],["%1$s (default)","Brand account",1,"%1$s (delegated)",1,null,83,"?authuser=$authuser",null,null,null,1,"https://accounts.google.com/ListAccounts?listPages=0\u0026pid=331\u0026gpsia=1\u0026source=ogb\u0026atic=1\u0026mo=1\u0026mn=1\u0026hl=en",0,"dashboard",null,null,null,null,"Profile","",1,null,"Signed out","https://accounts.google.com/AccountChooser?source=ogb\u0026continue=$continue\u0026Email=$email\u0026ec=GAhAywI","https://accounts.google.com/RemoveLocalAccount?source=ogb","Remove","Sign in",0,1,1,0,1,1,0,null,null,null,"Session expired",null,null,null,"Visitor",null,"Default","Delegated","Sign out of all accounts",0,null,null,0,null,null,"myaccount.google.com","https",0,1,0],null,["1","gci_91f30755d6a6b787dcc2a4062e6e9824.js","googleapis.client:gapi.iframes","0","en"],null,null,null,null,["m;/_/scs/abc-static/_/js/k=gapi.gapi.en.vIVemAYlBvo.O/d=1/rs=AHpOoo_eZqauDOH0vAaumGJQwp71CTPx9g/m=__features__","https://apis.google.com","","","1","",null,1,"es_plusone_gc_20230802.0_p0","en",null,0],[0.009999999776482582,"co.jp","331",[null,"","0",null,1,5184000,null,null,"",null,null,null,null,null,0,null,0,null,1,0,0,0,null,null,0,0,null,0,0,0,0,0],null,null,null,0,null,null,["5061451","google\\.(com|ru|ca|by|kz|com\\.mx|com\\.tr)$",1]],[1,1,null,40400,331,"JPN","en","560569280.0",8,0.009999999776482582,1,0,null,null,null,null,"3700949,3701177,3701179",null,null,null,"pvP0ZM7-Bs2gp84P0a6rmAM",0,0,0,null,2,5,"nn",104,0,0,1,1,1],[[null,null,null,"https://www.gstatic.com/og/_/js/k=og.qtm.en_US.GAa-2MwnVzE.2019.O/rt=j/m=qabr,qgl,q_dnp,qcwid,qbd,qapid,qrcd,q_dg/exm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/rs=AA2YrTs1EAyibfMuv084JcTDqRqNnSIc2g"],[null,null,null,"https://www.gstatic.com/og/_/ss/k=og.qtm.cQMpi_fC13c.L.W.O/m=qcwid/excm=qaaw,qadd,qaid,qein,qhaw,qhba,qhbr,qhch,qhga,qhid,qhin/d=1/ed=1/ct=zgms/rs=AA2YrTtUabOIm7e_T7ppdWRFhU42GSd0lQ"]],null,null,null,[[[null,null,[null,null,null,"https://ogs.google.com/u/0/widget/account?amf=1\u0026amb=1\u0026sea=1"],0,414,436,57,4,1,0,0,65,66,8000,"https://accounts.google.com/SignOutOptions?hl=en\u0026continue=https://developers.google.com/_d/profile/ogb%3Fhl%3Dzh-cn\u0026ec=GBRAywI",68,2,null,null,1,113,"Something went wrong.%1$s Refresh to try again or %2$schoose another account%3$s.",3,null,null,75,0,null,null,null,null,null,null,null,"/widget/account",["https","myaccount.google.com",0,32,83,0],0,0,1,["Critical security alert","Important account alert"],0,1,null,1,1]],null,null,"18","331",1,0,null,"en",0,["?authuser=$authuser","https://accounts.google.com/AddSession?continue=\u0026ec=GAlAywI","https://accounts.google.com/Logout?continue=https://developers.google.com/\u0026service=ahsid\u0026ec=GAdAywI","https://accounts.google.com/ListAccounts?listPages=0\u0026pid=331\u0026gpsia=1\u0026source=ogb\u0026atic=1\u0026mo=1\u0026mn=1\u0026hl=en",0,0,"",0,0,null,0,1,"https://accounts.google.com/ServiceLogin?continue=https://developers.google.com/\u0026authuser=0\u0026ec=GAZAywI"],0,0,0,null,0],null,[["mousedown","touchstart","touchmove","wheel","keydown"],300000],[[null,null,null,"https://accounts.google.com/RotateCookiesPage"],3,0,1,0,3701177]]],};this.gbar_=this.gbar_||{};(function(_){var window=this;
+try{
+/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+var ha,ma,pa,qa,ya,Aa,Ba,Ca,Da,Ga,Oa,Qa,Pa,Sa,Ua,Ta,Va,Wa,bb;_.aa=function(a,b){if(Error.captureStackTrace)Error.captureStackTrace(this,_.aa);else{const c=Error().stack;c&&(this.stack=c)}a&&(this.message=String(a));void 0!==b&&(this.cause=b)};_.ca=function(){var a=_.p.navigator;return a&&(a=a.userAgent)?a:""};ha=function(a){return ea?fa?fa.brands.some(({brand:b})=>b&&-1!=b.indexOf(a)):!1:!1};_.t=function(a){return-1!=_.ca().indexOf(a)};_.ia=function(){return ea?!!fa&&0<fa.brands.length:!1};
+_.ja=function(){return _.ia()?!1:_.t("Opera")};_.ka=function(){return _.ia()?!1:_.t("Trident")||_.t("MSIE")};_.la=function(){return _.t("Firefox")||_.t("FxiOS")};_.na=function(){return _.t("Safari")&&!(ma()||(_.ia()?0:_.t("Coast"))||_.ja()||(_.ia()?0:_.t("Edge"))||(_.ia()?ha("Microsoft Edge"):_.t("Edg/"))||(_.ia()?ha("Opera"):_.t("OPR"))||_.la()||_.t("Silk")||_.t("Android"))};ma=function(){return _.ia()?ha("Chromium"):(_.t("Chrome")||_.t("CriOS"))&&!(_.ia()?0:_.t("Edge"))||_.t("Silk")};
+_.oa=function(){return _.t("Android")&&!(ma()||_.la()||_.ja()||_.t("Silk"))};pa=function(){return ea?!!fa&&!!fa.platform:!1};qa=function(){return _.t("iPhone")&&!_.t("iPod")&&!_.t("iPad")};_.ra=function(){return qa()||_.t("iPad")||_.t("iPod")};_.sa=function(){return pa()?"macOS"===fa.platform:_.t("Macintosh")};_.ua=function(a,b){return 0<=_.ta(a,b)};
+_.va=function(a){let b="",c=0;const d=a.length-10240;for(;c<d;)b+=String.fromCharCode.apply(null,a.subarray(c,c+=10240));b+=String.fromCharCode.apply(null,c?a.subarray(c):a);return btoa(b)};_.wa=function(a){return null!=a&&a instanceof Uint8Array};_.xa=function(a){return Array.prototype.slice.call(a)};ya=function(a){const b=a[_.u]|0;1!==(b&1)&&(Object.isFrozen(a)&&(a=_.xa(a)),a[_.u]=b|1)};_.za=function(a){a[_.u]|=1;return a};Aa=function(a,b){b[_.u]=(a|0)&-255};Ba=function(a,b){b[_.u]=(a|34)&-221};
+Ca=function(a){a=a>>11&1023;return 0===a?536870912:a};Da=function(a){return null!==a&&"object"===typeof a&&!Array.isArray(a)&&a.constructor===Object};_.Ea=function(a){if(a&2)throw Error();};Ga=function(a,b){(b=_.Fa?b[_.Fa]:void 0)&&(a[_.Fa]=_.xa(b))};_.Ha=function(a){if("number"!==typeof a)throw Error();return a};_.Ia=function(a){if(null!=a&&"string"!==typeof a)throw Error();return a};_.Ja=function(a){return null==a||"string"===typeof a?a:void 0};
+_.La=function(a,b,c){var d=!1;if(null!=a&&"object"===typeof a&&!(d=Array.isArray(a))&&a.qe===Ka)return a;if(d){var e=d=a[_.u]|0;0===e&&(e|=c&32);e|=c&2;e!==d&&(a[_.u]=e);return new b(a)}};_.Na=function(a,b){Ma=b;a=new a(b);Ma=void 0;return a};Oa=function(a,b,c){const d=1023+b,e=a.length;for(let f=d;f<e;f++){const g=a[f];null!=g&&g!==c&&(c[f-b]=g)}a.length=d+1;a[d]=c};Qa=function(a,b){return Pa(b)};
+Pa=function(a){switch(typeof a){case "number":return isFinite(a)?a:String(a);case "boolean":return a?1:0;case "object":if(a&&!Array.isArray(a)){if(_.wa(a))return _.va(a);if("function"==typeof _.Ra&&a instanceof _.Ra)return a.hg()}}return a};Sa=function(a,b,c){const d=_.xa(a);var e=d.length;const f=b&256?d[e-1]:void 0;e+=f?-1:0;for(b=b&512?1:0;b<e;b++)d[b]=c(d[b]);if(f){b=d[b]={};for(const g in f)b[g]=c(f[g])}Ga(d,a);return d};
+Ua=function(a,b,c,d,e,f){if(null!=a){if(Array.isArray(a))a=e&&0==a.length&&(a[_.u]|0)&1?void 0:f&&(a[_.u]|0)&2?a:Ta(a,b,c,void 0!==d,e,f);else if(Da(a)){const g={};for(let h in a)g[h]=Ua(a[h],b,c,d,e,f);a=g}else a=b(a,d);return a}};Ta=function(a,b,c,d,e,f){const g=d||c?a[_.u]|0:0;d=d?!!(g&32):void 0;const h=_.xa(a);for(let k=0;k<h.length;k++)h[k]=Ua(h[k],b,c,d,e,f);c&&(Ga(h,a),c(g,h));return h};Va=function(a){return a.qe===Ka?a.toJSON():Pa(a)};
+Wa=function(a,b,c=Ba){if(null!=a){if(a instanceof Uint8Array)return b?a:new Uint8Array(a);if(Array.isArray(a)){const d=a[_.u]|0;return d&2?a:!b||d&68||!(d&32||0===d)?Ta(a,Wa,d&4?Ba:c,!0,!1,!0):(a[_.u]=d|34,a)}a.qe===Ka&&(b=a.na,c=b[_.u],a=c&2?a:_.Na(a.constructor,_.Xa(b,c,!0)));return a}};_.Xa=function(a,b,c){const d=c||b&2?Ba:Aa,e=!!(b&32);a=Sa(a,b,f=>Wa(f,e,d));a[_.u]=a[_.u]|32|(c?2:0);return a};_.Ya=function(a){const b=a.na,c=b[_.u];return c&2?_.Na(a.constructor,_.Xa(b,c,!1)):a};
+_.Za=function(a,b,c,d,e){var f=Ca(b);if(c>=f||e){e=b;if(b&256)f=a[a.length-1];else{if(null==d)return;f=a[f+(+!!(b&512)-1)]={};e|=256}f[c]=d;e!==b&&(a[_.u]=e)}else a[c+(+!!(b&512)-1)]=d,b&256&&(a=a[a.length-1],c in a&&delete a[c])};_.$a=function(a,b){return null!=a?a:b};
+bb=function(a,b,c){var d=a.constructor.ya,e=Ca((c?a.na:b)[_.u]),f=!1;if(d){if(!c){b=_.xa(b);var g;if(b.length&&Da(g=b[b.length-1]))for(f=0;f<d.length;f++)if(d[f]>=e){Object.assign(b[b.length-1]={},g);break}f=!0}e=b;c=!c;g=a.na[_.u];a=Ca(g);g=+!!(g&512)-1;var h;for(let G=0;G<d.length;G++){var k=d[G];if(k<a){k+=g;var m=e[k];null==m?e[k]=c?_.ab:_.za([]):c&&m!==_.ab&&ya(m)}else{if(!h){var n=void 0;e.length&&Da(n=e[e.length-1])?h=n:e.push(h={})}m=h[k];null==h[k]?h[k]=c?_.ab:_.za([]):c&&m!==_.ab&&ya(m)}}}d=
+b.length;if(!d)return b;let q,v;if(Da(h=b[d-1])){a:{var r=h;n={};e=!1;for(let G in r)c=r[G],Array.isArray(c)&&c!=c&&(e=!0),null!=c?n[G]=c:e=!0;if(e){for(let G in n){r=n;break a}r=null}}r!=h&&(q=!0);d--}for(;0<d;d--){h=b[d-1];if(null!=h)break;v=!0}if(!q&&!v)return b;var D;f?D=b:D=Array.prototype.slice.call(b,0,d);b=D;f&&(b.length=d);r&&b.push(r);return b};_.w=function(a,b){return null!=a?!!a:!!b};_.x=function(a,b){void 0==b&&(b="");return null!=a?a:b};
+_.cb=function(a,b){void 0==b&&(b=0);return null!=a?a:b};_.eb=function(a,b){let c,d;for(let e=1;e<arguments.length;e++){d=arguments[e];for(c in d)a[c]=d[c];for(let f=0;f<db.length;f++)c=db[f],Object.prototype.hasOwnProperty.call(d,c)&&(a[c]=d[c])}};var kb,lb;_.fb=_.fb||{};_.p=this||self;_.gb=function(a,b){a=a.split(".");b=b||_.p;for(var c=0;c<a.length;c++)if(b=b[a[c]],null==b)return null;return b};_.hb=function(a){var b=typeof a;return"object"!=b?b:a?Array.isArray(a)?"array":b:"null"};_.ib=function(a){var b=typeof a;return"object"==b&&null!=a||"function"==b};_.jb="closure_uid_"+(1E9*Math.random()>>>0);kb=function(a,b,c){return a.call.apply(a.bind,arguments)};
+lb=function(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var e=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(e,d);return a.apply(b,e)}}return function(){return a.apply(b,arguments)}};_.y=function(a,b,c){_.y=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?kb:lb;return _.y.apply(null,arguments)};
+_.z=function(a,b){a=a.split(".");var c=_.p;a[0]in c||"undefined"==typeof c.execScript||c.execScript("var "+a[0]);for(var d;a.length&&(d=a.shift());)a.length||void 0===b?c[d]&&c[d]!==Object.prototype[d]?c=c[d]:c=c[d]={}:c[d]=b};_.A=function(a,b){function c(){}c.prototype=b.prototype;a.V=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.xi=function(d,e,f){for(var g=Array(arguments.length-2),h=2;h<arguments.length;h++)g[h-2]=arguments[h];return b.prototype[e].apply(d,g)}};_.A(_.aa,Error);_.aa.prototype.name="CustomError";_.mb=String.prototype.trim?function(a){return a.trim()}:function(a){return/^[\s\xa0]*([\s\S]*?)[\s\xa0]*$/.exec(a)[1]};var ea,nb=_.gb("WIZ_global_data.oxN3nb"),ob=nb&&nb[610401301];ea=null!=ob?ob:!1;var fa,pb=_.p.navigator;fa=pb?pb.userAgentData||null:null;_.ta=function(a,b){return Array.prototype.indexOf.call(a,b,void 0)};_.qb=function(a,b,c){Array.prototype.forEach.call(a,b,c)};_.rb=function(a){_.rb[" "](a);return a};_.rb[" "]=function(){};var Eb,Fb,Kb;_.sb=_.ja();_.B=_.ka();_.tb=_.t("Edge");_.ub=_.tb||_.B;_.vb=_.t("Gecko")&&!(-1!=_.ca().toLowerCase().indexOf("webkit")&&!_.t("Edge"))&&!(_.t("Trident")||_.t("MSIE"))&&!_.t("Edge");_.wb=-1!=_.ca().toLowerCase().indexOf("webkit")&&!_.t("Edge");_.xb=_.sa();_.yb=pa()?"Windows"===fa.platform:_.t("Windows");_.zb=pa()?"Android"===fa.platform:_.t("Android");_.Ab=qa();_.Bb=_.t("iPad");_.Cb=_.t("iPod");_.Db=_.ra();Eb=function(){var a=_.p.document;return a?a.documentMode:void 0};
+a:{var Gb="",Hb=function(){var a=_.ca();if(_.vb)return/rv:([^\);]+)(\)|;)/.exec(a);if(_.tb)return/Edge\/([\d\.]+)/.exec(a);if(_.B)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(_.wb)return/WebKit\/(\S+)/.exec(a);if(_.sb)return/(?:Version)[ \/]?(\S+)/.exec(a)}();Hb&&(Gb=Hb?Hb[1]:"");if(_.B){var Ib=Eb();if(null!=Ib&&Ib>parseFloat(Gb)){Fb=String(Ib);break a}}Fb=Gb}_.Jb=Fb;if(_.p.document&&_.B){var Lb=Eb();Kb=Lb?Lb:parseInt(_.Jb,10)||void 0}else Kb=void 0;_.Mb=Kb;_.Nb=_.la();_.Ob=qa()||_.t("iPod");_.Pb=_.t("iPad");_.Qb=_.oa();_.Rb=ma();_.Sb=_.na()&&!_.ra();_.Tb="undefined"!==typeof TextDecoder;_.Ub="undefined"!==typeof TextEncoder;_.u=Symbol();var Ka,Vb,Wb;Ka={};Wb=[];Wb[_.u]=39;_.ab=Object.freeze(Wb);var Ma;_.C=function(a,b){a=a.na;return _.Yb(a,a[_.u],b)};_.Yb=function(a,b,c,d){if(-1===c)return null;if(c>=Ca(b)){if(b&256)return a[a.length-1][c]}else{var e=a.length;if(d&&b&256&&(d=a[e-1][c],null!=d))return d;b=c+(+!!(b&512)-1);if(b<e)return a[b]}};_.E=function(a,b,c,d){const e=a.na,f=e[_.u];_.Ea(f);_.Za(e,f,b,c,d);return a};_.F=function(a,b){a=_.C(a,b);return null==a?a:"boolean"!==typeof a&&"number"!==typeof a?void 0:!!a};
+_.Zb=function(a,b,c,d){a=a.na;const e=a[_.u],f=_.Yb(a,e,c,d);b=_.La(f,b,e);b!==f&&null!=b&&_.Za(a,e,c,b,d);return b};_.H=function(a,b,c,d=!1){b=_.Zb(a,b,c,d);if(null==b)return b;a=a.na;const e=a[_.u];if(!(e&2)){const f=_.Ya(b);f!==b&&(b=f,_.Za(a,e,c,b,d))}return b};_.I=function(a,b,c){null==c&&(c=void 0);return _.E(a,b,c)};_.J=function(a,b){return _.Ja(_.C(a,b))};_.K=function(a,b){return _.$a(_.F(a,b),!1)};
+_.$b=function(a,b,c=0){a=a.na;const d=a[_.u],e=_.Yb(a,d,b);var f=null==e?e:"number"===typeof e||"NaN"===e||"Infinity"===e||"-Infinity"===e?Number(e):void 0;null!=f&&f!==e&&_.Za(a,d,b,f);return _.$a(f,c)};_.L=function(a,b){return _.$a(_.J(a,b),"")};_.M=function(a,b,c){if(null!=c){if("boolean"!==typeof c)throw Error("q`"+_.hb(c)+"`"+c);c=!!c}return _.E(a,b,c)};_.N=function(a,b,c){return _.E(a,b,null==c?c:_.Ha(c))};_.O=function(a,b,c){return _.E(a,b,_.Ia(c))};_.P=class{constructor(a,b,c){a:{null==a&&(a=Ma);Ma=void 0;if(null==a){var d=96;c?(a=[c],d|=512):a=[];b&&(d=d&-2095105|(b&1023)<<11)}else{if(!Array.isArray(a))throw Error();d=a[_.u]|0;if(d&64){_.Xb&&delete a[_.Xb];break a}d|=64;if(c&&(d|=512,c!==a[0]))throw Error();b:{c=a;var e=c.length;if(e){const g=e-1;var f=c[g];if(Da(f)){d|=256;b=+!!(d&512)-1;e=g-b;1024<=e&&(Oa(c,b,f),e=1023);d=d&-2095105|(e&1023)<<11;break b}}b&&(f=+!!(d&512)-1,b=Math.max(b,e-f),1024<b&&(Oa(c,f,{}),d|=256,b=1023),d=d&-2095105|
+(b&1023)<<11)}}a[_.u]=d}this.na=a}toJSON(){if(Vb)var a=bb(this,this.na,!1);else a=Ta(this.na,Va,void 0,void 0,!1,!1),a=bb(this,a,!0);return a}Ha(){Vb=!0;try{return JSON.stringify(this.toJSON(),Qa)}finally{Vb=!1}}Yb(){return!!((this.na[_.u]|0)&2)}};_.P.prototype.qe=Ka;_.P.prototype.toString=function(){return bb(this,this.na,!1).toString()};_.ac=Symbol();_.bc=Symbol();_.cc=Symbol();_.dc=Symbol();var ec=class extends _.P{constructor(){super()}};_.fc=class extends _.P{constructor(){super()}xd(a){return _.N(this,3,a)}};var gc=class extends _.P{constructor(a){super(a)}};var hc=class extends _.P{constructor(a){super(a)}Rc(a){return _.O(this,24,a)}};_.ic=class extends _.P{constructor(a){super(a)}};_.jc=function(){this.Ia=this.Ia;this.ma=this.ma};_.jc.prototype.Ia=!1;_.jc.prototype.isDisposed=function(){return this.Ia};_.jc.prototype.oa=function(){this.Ia||(this.Ia=!0,this.N())};_.jc.prototype.N=function(){if(this.ma)for(;this.ma.length;)this.ma.shift()()};var kc=class extends _.jc{constructor(){var a=window;super();this.o=a;this.i=[];this.j={}}resolve(a){var b=this.o;a=a.split(".");for(var c=a.length,d=0;d<c;++d)if(b[a[d]])b=b[a[d]];else return null;return b instanceof Function?b:null}Jc(){for(var a=this.i.length,b=this.i,c=[],d=0;d<a;++d){var e=b[d].i(),f=this.resolve(e);if(f&&f!=this.j[e])try{b[d].Jc(f)}catch(g){}else c.push(b[d])}this.i=c.concat(b.slice(a))}};var mc=class extends _.jc{constructor(){var a=_.lc;super();this.o=a;this.v=this.i=null;this.s=0;this.B={};this.j=!1;a=window.navigator.userAgent;0<=a.indexOf("MSIE")&&0<=a.indexOf("Trident")&&(a=/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a))&&a[1]&&9>parseFloat(a[1])&&(this.j=!0)}A(a,b){this.i=b;this.v=a;b.preventDefault?b.preventDefault():b.returnValue=!1}};_.nc=class extends _.P{constructor(a){super(a)}};var oc=class extends _.P{constructor(a){super(a)}};var qc;_.pc=function(a,b){if(a.i){const c=new ec;_.O(c,1,b.message);_.O(c,2,b.stack);_.N(c,3,b.lineNumber);_.E(c,5,1);b=new _.fc;_.I(b,40,c);a.i.log(98,b)}};qc=class{constructor(){this.i=null}log(a){_.pc(this,a)}};var tc,uc,xc,zc;_.rc=class{constructor(a){this.i=a}toString(){return this.i.toString()}};_.rc.prototype.Bb=!0;_.rc.prototype.ob=function(){return this.i.toString()};_.sc=function(a){return a instanceof _.rc&&a.constructor===_.rc?a.i:"type_error:SafeUrl"};tc=/^data:(.*);base64,[a-z0-9+\/]+=*$/i;uc=/^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i;
+_.wc=function(a){if(a instanceof _.rc)return a;a="object"==typeof a&&a.Bb?a.ob():String(a);uc.test(a)?a=_.vc(a):(a=String(a).replace(/(%0A|%0D)/g,""),a=a.match(tc)?_.vc(a):null);return a};try{new URL("s://g"),xc=!0}catch(a){xc=!1}_.yc=xc;zc={};_.vc=function(a){return new _.rc(a,zc)};_.Bc=_.vc("about:invalid#zClosurez");var Cc,Fc,Ec;_.Dc=function(a){let b;b=window.google&&window.google.logUrl?"":"https://www.google.com";b+="/gen_204?use_corp=on&";b+=a.Ha(2040-b.length);Cc(_.wc(b)||_.Bc)};Cc=function(a){var b=new Image,c=Ec;b.onerror=b.onload=b.onabort=function(){c in Fc&&delete Fc[c]};Fc[Ec++]=b;b.src=_.sc(a)};Fc=[];Ec=0;_.Gc=class{constructor(){this.data={}}Ha(a){var b=[],c;for(c in this.data)b.push(encodeURIComponent(c)+"="+encodeURIComponent(String(this.data[c])));return("atyp=i&zx="+(new Date).getTime()+"&"+b.join("&")).substr(0,a)}};var Hc=class extends _.Gc{constructor(a){super();var b=_.H(a,gc,8)||new gc;window.google&&window.google.kEI&&(this.data.ei=window.google.kEI);this.data.sei=_.x(_.J(a,10));this.data.ogf=_.x(_.J(b,3));this.data.ogrp=(window.google&&window.google.sn?!/.*hp$/.test(window.google.sn):_.w(_.F(a,7)))?"1":"";this.data.ogv=_.x(_.J(b,6))+"."+_.x(_.J(b,7));this.data.ogd=_.x(_.J(a,21));this.data.ogc=_.x(_.J(a,20));this.data.ogl=_.x(_.J(a,5));this.data.oggv="quantum:gapiBuildLabel"}};var db="constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");var Ic=[1,2,3,4,5,6,9,10,11,13,14,28,29,30,34,35,37,38,39,40,42,43,48,49,50,51,52,53,62,500],Kc=function(a){if(!Jc){Jc={};for(var b=0;b<Ic.length;b++)Jc[Ic[b]]=!0}return!!Jc[a]},Lc=function(a){a=String(a);return a.replace(".","%2E").replace(",","%2C")},Mc=class extends Hc{constructor(a,b,c,d,e){super(a);_.eb(this.data,{oge:c,ogex:_.x(_.J(a,9)),ogp:_.x(_.J(a,6)),ogsr:Math.round(1/(Kc(c)?_.cb(_.$b(b,3,1)):_.cb(_.$b(b,2,1E-4)))),ogus:d});if(e){"ogw"in e&&(this.data.ogw=e.ogw,delete e.ogw);"ved"in e&&
+(this.data.ved=e.ved,delete e.ved);a=[];for(var f in e)0!=a.length&&a.push(","),a.push(Lc(f)),a.push("."),a.push(Lc(e[f]));e=a.join("");""!=e&&(this.data.ogad=e)}}},Jc=null;var Nc=class extends _.P{constructor(a){super(a)}};var Rc=class{constructor(){var a=Oc,b=Pc,c=Qc;this.i=a;this.s=b;this.o=_.cb(_.$b(a,2,1E-4),1E-4);this.B=_.cb(_.$b(a,3,1),1);b=Math.random();this.j=_.w(_.F(a,1))&&b<this.o;this.v=_.w(_.F(a,1))&&b<this.B;a=0;_.w(_.F(c,1))&&(a|=1);_.w(_.F(c,2))&&(a|=2);_.w(_.F(c,3))&&(a|=4);this.A=a}log(a,b){try{if(Kc(a)?this.v:this.j){const c=new Mc(this.s,this.i,a,this.A,b);_.Dc(c)}}catch(c){}}};var Tc;_.Sc=function(a){if(0<a.j.length){var b=void 0!==a.ua,c=void 0!==a.i;if(b||c){b=b?a.o:a.s;c=a.j;a.j=[];try{_.qb(c,b,a)}catch(d){console.error(d)}}}};_.Uc=class{constructor(a){this.ua=a;this.i=void 0;this.j=[]}then(a,b,c){this.j.push(new Tc(a,b,c));_.Sc(this)}resolve(a){if(void 0!==this.ua||void 0!==this.i)throw Error("y");this.ua=a;_.Sc(this)}o(a){a.j&&a.j.call(a.i,this.ua)}s(a){a.o&&a.o.call(a.i,this.i)}};Tc=class{constructor(a,b,c){this.j=a;this.o=b;this.i=c}};_.Vc=a=>{var b="zc";if(a.zc&&a.hasOwnProperty(b))return a.zc;b=new a;return a.zc=b};_.Q=class{constructor(){this.s=new _.Uc;this.i=new _.Uc;this.C=new _.Uc;this.B=new _.Uc;this.A=new _.Uc;this.v=new _.Uc;this.o=new _.Uc;this.j=new _.Uc;this.G=new _.Uc}J(){return this.s}L(){return this.i}M(){return this.C}K(){return this.B}Ia(){return this.A}ma(){return this.v}H(){return this.o}F(){return this.j}static i(){return _.Vc(_.Q)}};var $c;_.Xc=function(){return _.H(_.Wc,hc,1)};_.Yc=function(){return _.H(_.Wc,_.ic,5)};$c=class extends _.P{constructor(){super(Zc)}};var Zc;window.gbar_&&window.gbar_.CONFIG?Zc=window.gbar_.CONFIG[0]||{}:Zc=[];_.Wc=new $c;var Pc,Qc,Oc;_.H(_.Wc,oc,3)||new oc;_.Xc()||new hc;_.lc=new qc;Pc=_.Xc()||new hc;Qc=_.Yc()||new _.ic;Oc=_.H(_.Wc,Nc,4)||new Nc;new Rc;_.z("gbar_._DumpException",function(a){_.lc?_.lc.log(a):console.error(a)});_.ad=new mc;var cd;_.dd=function(a,b){var c=_.bd.i();if(a in c.i){if(c.i[a]!=b)throw new cd;}else{c.i[a]=b;if(b=c.j[a])for(let d=0,e=b.length;d<e;d++)b[d].i(c.i,a);delete c.j[a]}};_.bd=class{constructor(){this.i={};this.j={}}static i(){return _.Vc(_.bd)}};_.fd=class extends _.aa{constructor(){super()}};cd=class extends _.fd{};_.z("gbar.A",_.Uc);_.Uc.prototype.aa=_.Uc.prototype.then;_.z("gbar.B",_.Q);_.Q.prototype.ba=_.Q.prototype.L;_.Q.prototype.bb=_.Q.prototype.M;_.Q.prototype.bd=_.Q.prototype.Ia;_.Q.prototype.bf=_.Q.prototype.J;_.Q.prototype.bg=_.Q.prototype.K;_.Q.prototype.bh=_.Q.prototype.ma;_.Q.prototype.bj=_.Q.prototype.H;_.Q.prototype.bk=_.Q.prototype.F;_.z("gbar.a",_.Q.i());var gd=new kc;_.dd("api",gd);var hd=_.Yc()||new _.ic;window.__PVT=_.x(_.J(hd,8));_.dd("eq",_.ad);
+}catch(e){_._DumpException(e)}
+try{
+_.id=class extends _.P{constructor(a){super(a)}};
+}catch(e){_._DumpException(e)}
+try{
+var jd=class extends _.P{constructor(){super()}};var kd=class extends _.jc{constructor(){super();this.j=[];this.i=[]}o(a,b){this.j.push({features:a,options:b})}init(a,b,c){window.gapi={};var d=window.___jsl={};d.h=_.x(_.J(a,1));null!=_.F(a,12)&&(d.dpo=_.w(_.K(a,12)));d.ms=_.x(_.J(a,2));d.m=_.x(_.J(a,3));d.l=[];_.L(b,1)&&(a=_.J(b,3))&&this.i.push(a);_.L(c,1)&&(c=_.J(c,2))&&this.i.push(c);_.z("gapi.load",(0,_.y)(this.o,this));return this}};var ld=_.H(_.Wc,_.nc,14);if(ld){var md=_.H(_.Wc,_.id,9)||new _.id,nd=new jd,od=new kd;od.init(ld,md,nd);_.dd("gs",od)};
+}catch(e){_._DumpException(e)}
+})(this.gbar_);
+// Google Inc.
+</script><script id="ogb-head-script2">this.gbar_=this.gbar_||{};(function(_){var window=this;
+try{
+_.pd=function(a,b,c){if(!a.j)if(c instanceof Array)for(var d of c)_.pd(a,b,d);else{d=(0,_.y)(a.A,a,b);const e=a.s+c;a.s++;b.dataset.eqid=e;a.B[e]=d;b&&b.addEventListener?b.addEventListener(c,d,!1):b&&b.attachEvent?b.attachEvent("on"+c,d):a.o.log(Error("v`"+b))}};
+}catch(e){_._DumpException(e)}
+try{
+_.qd=function(){if(!_.p.addEventListener||!Object.defineProperty)return!1;var a=!1,b=Object.defineProperty({},"passive",{get:function(){a=!0}});try{const c=()=>{};_.p.addEventListener("test",c,b);_.p.removeEventListener("test",c,b)}catch(c){}return a}();
+}catch(e){_._DumpException(e)}
+try{
+var rd=document.querySelector(".gb_l .gb_d"),sd=document.querySelector("#gb.gb_Oc");rd&&!sd&&_.pd(_.ad,rd,"click");
+}catch(e){_._DumpException(e)}
+try{
+_.ih=function(a){const b=[];let c=0;for(const d in a)b[c++]=a[d];return b};_.jh=function(a){if(a.o)return a.o;for(const b in a.i)if(a.i[b].qa()&&a.i[b].B())return a.i[b];return null};_.kh=function(a,b){a.i[b.J()]=b};var lh=new class extends _.jc{constructor(){var a=_.lc;super();this.B=a;this.o=null;this.j={};this.A={};this.i={};this.s=null}v(a){this.i[a]&&(_.jh(this)&&_.jh(this).J()==a||this.i[a].O(!0))}Wa(a){this.s=a;for(const b in this.i)this.i[b].qa()&&this.i[b].Wa(a)}wc(a){return a in this.i?this.i[a]:null}};_.dd("dd",lh);
+}catch(e){_._DumpException(e)}
+try{
+_.Ti=function(a,b){return _.M(a,36,b)};
+}catch(e){_._DumpException(e)}
+try{
+var Ui=document.querySelector(".gb_b .gb_d"),Vi=document.querySelector("#gb.gb_Oc");Ui&&!Vi&&_.pd(_.ad,Ui,"click");
+}catch(e){_._DumpException(e)}
+})(this.gbar_);
+// Google Inc.
+</script><script id="ogb-head-script3">this.gbar_=this.gbar_||{};(function(_){var window=this;
+try{
+var ud,xd;_.td=function(a){const b=a.length;if(0<b){const c=Array(b);for(let d=0;d<b;d++)c[d]=a[d];return c}return[]};ud=function(a){return a};_.vd=function(a){var b=null,c=_.p.trustedTypes;if(!c||!c.createPolicy)return b;try{b=c.createPolicy(a,{createHTML:ud,createScript:ud,createScriptURL:ud})}catch(d){_.p.console&&_.p.console.error(d.message)}return b};_.wd=function(a,b){return 0==a.lastIndexOf(b,0)};_.yd=function(){void 0===xd&&(xd=_.vd("ogb-qtm#html"));return xd};try{(new self.OffscreenCanvas(0,0)).getContext("2d")}catch(a){};_.zd={};_.Ad=class{constructor(a){this.i=a;this.Bb=!0}ob(){return this.i}toString(){return this.i.toString()}};_.Bd=new _.Ad("",_.zd);_.Cd=RegExp("^[-+,.\"'%_!#/ a-zA-Z0-9\\[\\]]+$");_.Dd=RegExp("\\b(url\\([ \t\n]*)('[ -&(-\\[\\]-~]*'|\"[ !#-\\[\\]-~]*\"|[!#-&*-\\[\\]-~]*)([ \t\n]*\\))","g");_.Ed=RegExp("\\b(calc|cubic-bezier|fit-content|hsl|hsla|linear-gradient|matrix|minmax|radial-gradient|repeat|rgb|rgba|(rotate|scale|translate)(X|Y|Z|3d)?|steps|var)\\([-+*/0-9a-zA-Z.%#\\[\\], ]+\\)","g");var Fd;Fd={};_.Hd=function(a){return a instanceof _.Gd&&a.constructor===_.Gd?a.i:"type_error:SafeHtml"};_.Id=function(a){const b=_.yd();a=b?b.createHTML(a):a;return new _.Gd(a,Fd)};_.Gd=class{constructor(a){this.i=a;this.Bb=!0}ob(){return this.i.toString()}toString(){return this.i.toString()}};_.Jd=new _.Gd(_.p.trustedTypes&&_.p.trustedTypes.emptyHTML||"",Fd);_.Kd=_.Id("<br>");var Md;_.Ld=function(a){let b=!1,c;return function(){b||(c=a(),b=!0);return c}}(function(){var a=document.createElement("div"),b=document.createElement("div");b.appendChild(document.createElement("div"));a.appendChild(b);b=a.firstChild.firstChild;a.innerHTML=_.Hd(_.Jd);return!b.parentElement});Md=/^[\w+/_-]+[=]{0,2}$/;
+_.Nd=function(a){a=(a||_.p).document;return a.querySelector?(a=a.querySelector('style[nonce],link[rel="stylesheet"][nonce]'))&&(a=a.nonce||a.getAttribute("nonce"))&&Md.test(a)?a:"":""};_.Od=function(a,b){this.width=a;this.height=b};_.l=_.Od.prototype;_.l.aspectRatio=function(){return this.width/this.height};_.l.Hb=function(){return!(this.width*this.height)};_.l.ceil=function(){this.width=Math.ceil(this.width);this.height=Math.ceil(this.height);return this};_.l.floor=function(){this.width=Math.floor(this.width);this.height=Math.floor(this.height);return this};_.l.round=function(){this.width=Math.round(this.width);this.height=Math.round(this.height);return this};_.R=function(a,b){var c=b||document;if(c.getElementsByClassName)a=c.getElementsByClassName(a)[0];else{c=document;var d=b||c;a=d.querySelectorAll&&d.querySelector&&a?d.querySelector(a?"."+a:""):_.Pd(c,a,b)[0]||null}return a||null};
+_.Pd=function(a,b,c){var d;a=c||a;if(a.querySelectorAll&&a.querySelector&&b)return a.querySelectorAll(b?"."+b:"");if(b&&a.getElementsByClassName){var e=a.getElementsByClassName(b);return e}e=a.getElementsByTagName("*");if(b){var f={};for(c=d=0;a=e[c];c++){var g=a.className;"function"==typeof g.split&&_.ua(g.split(/\s+/),b)&&(f[d++]=a)}f.length=d;return f}return e};_.Rd=function(a){return _.Qd(document,a)};
+_.Qd=function(a,b){b=String(b);"application/xhtml+xml"===a.contentType&&(b=b.toLowerCase());return a.createElement(b)};_.Sd=function(a){for(var b;b=a.firstChild;)a.removeChild(b)};_.Td=function(a){return 9==a.nodeType?a:a.ownerDocument||a.document};
+}catch(e){_._DumpException(e)}
+try{
+var ne,pe;_.ie=function(a){if(null==a)return a;if("string"===typeof a){if(!a)return;a=+a}if("number"===typeof a)return a};_.je=function(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var d=c.slice();d.push.apply(d,arguments);return a.apply(this,d)}};_.ke=function(a,b){return _.ie(_.C(a,b))};_.le=function(a,b){if(void 0!==a.ua||void 0!==a.i)throw Error("y");a.i=b;_.Sc(a)};_.me=class extends _.P{constructor(a){super(a)}};ne=class extends _.fd{};
+_.oe=function(a,b){if(b in a.i)return a.i[b];throw new ne;};pe=0;_.qe=function(a){return Object.prototype.hasOwnProperty.call(a,_.jb)&&a[_.jb]||(a[_.jb]=++pe)};
+_.re=function(a){if(a instanceof _.rc)return a;a="object"==typeof a&&a.Bb?a.ob():String(a);a:{var b=a;if(_.yc){try{var c=new URL(b)}catch(d){b="https:";break a}b=c.protocol}else b:{c=document.createElement("a");try{c.href=b}catch(d){b=void 0;break b}b=c.protocol;b=":"===b||""===b?"https:":b}}"javascript:"===b&&(a="about:invalid#zClosurez");return _.vc(a)};_.se=function(a){return _.oe(_.bd.i(),a)};
+}catch(e){_._DumpException(e)}
+try{
+var Zi;Zi={};_.$i=class{constructor(a){this.i=a}toString(){return this.i+""}};_.$i.prototype.Bb=!0;_.$i.prototype.ob=function(){return this.i.toString()};_.bj=function(a){return _.aj(a).toString()};_.aj=function(a){return a instanceof _.$i&&a.constructor===_.$i?a.i:"type_error:TrustedResourceUrl"};_.cj=function(a){const b=_.yd();a=b?b.createScriptURL(a):a;return new _.$i(a,Zi)};/*
+
+ SPDX-License-Identifier: Apache-2.0
+*/
+var dj;try{new URL("s://g"),dj=!0}catch(a){dj=!1}_.ej=dj;
+}catch(e){_._DumpException(e)}
+try{
+_.fj=class extends _.P{constructor(a){super(a)}};
+}catch(e){_._DumpException(e)}
+try{
+_.gj=function(a,b,c){a.rel=c;-1!=c.toLowerCase().indexOf("stylesheet")?(a.href=_.bj(b),(b=_.Nd(a.ownerDocument&&a.ownerDocument.defaultView))&&a.setAttribute("nonce",b)):a.href=b instanceof _.$i?_.bj(b):b instanceof _.rc?_.sc(b):_.sc(_.re(b))};
+}catch(e){_._DumpException(e)}
+try{
+_.hj=function(a){var b;let c;const d=null==(c=(b=(a.ownerDocument&&a.ownerDocument.defaultView||window).document).querySelector)?void 0:c.call(b,"script[nonce]");(b=d?d.nonce||d.getAttribute("nonce")||"":"")&&a.setAttribute("nonce",b)};_.ij=function(a,b){return(b||document).getElementsByTagName(String(a))};
+}catch(e){_._DumpException(e)}
+try{
+var kj=function(a,b,c){a<b?jj(a+1,b):_.lc.log(Error("Y`"+a+"`"+b),{url:c})},jj=function(a,b){if(lj){const c=_.Rd("SCRIPT");c.async=!0;c.type="text/javascript";c.charset="UTF-8";c.src=_.aj(lj);_.hj(c);c.onerror=_.je(kj,a,b,c.src);_.ij("HEAD")[0].appendChild(c)}},mj=class extends _.P{constructor(a){super(a)}};var nj=_.H(_.Wc,mj,17)||new mj,oj,lj=(oj=_.H(nj,_.fj,1))?_.cj(_.J(oj,4)||""):null,pj,qj=(pj=_.H(nj,_.fj,2))?_.cj(_.J(pj,4)||""):null,rj=function(){jj(1,2);if(qj){const a=_.Rd("LINK");a.setAttribute("type","text/css");_.gj(a,qj,"stylesheet");let b=_.Nd();b&&a.setAttribute("nonce",b);_.ij("HEAD")[0].appendChild(a)}};(function(){const a=_.Xc();if(_.F(a,18))rj();else{const b=_.ke(a,19)||0;window.addEventListener("load",()=>{window.setTimeout(rj,b)})}})();
+}catch(e){_._DumpException(e)}
+})(this.gbar_);
+// Google Inc.
+</script><script async="" type="text/javascript" charset="UTF-8" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/rs=AA2YrTs1EAyibfMuv084JcTDqRqNnSIc2g" nonce=""></script><link type="text/css" rel="stylesheet" href="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/rs=AA2YrTtUabOIm7e_T7ppdWRFhU42GSd0lQ"><script type="text/javascript" charset="UTF-8" nonce="" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/api.js" gapi_processed="true"></script></head>
+  <body class="" template="page" theme="google-blue" type="article" layout="docs" style="--devsite-js-header-height:48px; --devsite-panel-height:0px;" ready="" signed-in="">
+    <devsite-progress id="app-progress"></devsite-progress>
+  
+    <section class="devsite-wrapper"><devsite-header top-row--height="48" bottom-row--height="48" bottom-tabs--height="48" fixed="" style="--devsite-js-top-row--height:48px; --devsite-js-bottom-row--height:48px; --devsite-js-bottom-tabs--height:48px;" offset="48" bottom-row--hidden="">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner nocontent">
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Navigation menu button" aria-label="打开菜单">
+        </button>
+        <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/recaptcha?hl=zh-cn">
+    
+  <div class="devsite-product-logo-container" size="medium">
+  
+    
+      <img class="devsite-product-logo" alt="reCAPTCHA" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/recaptcha_48dp.png" srcset="" sizes="64px" loading="lazy">
+    
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/recaptcha?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" track-type="globalNav" track-name="breadcrumb" track-metadata-position="1" track-metadata-eventdetail="reCAPTCHA">
+    
+          reCAPTCHA
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+           </div>
+          
+<devsite-search aria-expanded="false" aria-haspopup="listbox" enable-signin="" enable-search="" enable-suggestions="" enable-query-completion="" project-name="reCAPTCHA" tenant-name="Google for Developers" project-scope="/recaptcha" url-scoped="https://developers.google.com/s/results/recaptcha?hl=zh-cn" role="combobox">
+  <form class="devsite-search-form" action="https://developers.google.com/s/results?hl=zh-cn" method="GET">
+    <div class="devsite-search-container">
+      <div class="devsite-searchbox">
+        <input aria-activedescendant="" aria-autocomplete="list" aria-label="搜索" aria-haspopup="false" aria-multiline="false" autocomplete="off" class="devsite-search-field devsite-search-query" name="q" placeholder="搜索" role="searchbox" type="text" value="" aria-controls="devsite-search-popout-container-id-1">
+        <div class="devsite-search-image material-icons" aria-hidden="true"></div>
+      </div>
+      <button type="button" search-open="" class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="打开搜索框"></button>
+    </div>
+  <div class="devsite-popout" id="devsite-search-popout-container-id-1"><div class="devsite-popout-result devsite-suggest-results-container" devsite-hide=""></div></div></form>
+  <button type="button" search-close="" class="devsite-search-button devsite-header-icon-button button-flat material-icons" aria-label="关闭搜索框"></button>
+</devsite-search>
+
+        <div class="devsite-search-background" style="opacity: 1;"></div></div>
+
+        
+
+        
+
+        
+
+        
+<devsite-language-selector aria-label="选择您的语言偏好设置。">
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en" href="https://developers.google.com/recaptcha/docs/verify">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id" href="https://developers.google.com/recaptcha/docs/verify?hl=id">Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de" href="https://developers.google.com/recaptcha/docs/verify?hl=de">Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es" href="https://developers.google.com/recaptcha/docs/verify?hl=es">Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es-419" href="https://developers.google.com/recaptcha/docs/verify?hl=es-419">Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr" href="https://developers.google.com/recaptcha/docs/verify?hl=fr">Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it" href="https://developers.google.com/recaptcha/docs/verify?hl=it">Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl" href="https://developers.google.com/recaptcha/docs/verify?hl=pl">Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt-br" href="https://developers.google.com/recaptcha/docs/verify?hl=pt-br">Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi" href="https://developers.google.com/recaptcha/docs/verify?hl=vi">Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr" href="https://developers.google.com/recaptcha/docs/verify?hl=tr">Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru" href="https://developers.google.com/recaptcha/docs/verify?hl=ru">Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he" href="https://developers.google.com/recaptcha/docs/verify?hl=he">עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar" href="https://developers.google.com/recaptcha/docs/verify?hl=ar">العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa" href="https://developers.google.com/recaptcha/docs/verify?hl=fa">فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi" href="https://developers.google.com/recaptcha/docs/verify?hl=hi">हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn" href="https://developers.google.com/recaptcha/docs/verify?hl=bn">বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th" href="https://developers.google.com/recaptcha/docs/verify?hl=th">ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh-cn" aria-current="true" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn">中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh-tw" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-tw">中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja" href="https://developers.google.com/recaptcha/docs/verify?hl=ja">日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko" href="https://developers.google.com/recaptcha/docs/verify?hl=ko">한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+        
+
+        
+          
+          
+          <devsite-user signed-in="" enable-profiles="" fp-auth="" id="devsite-user" sign-in-url="https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Frecaptcha%2Fdocs%2Fverify%3Fhl%3Dzh-cn&amp;prompt=select_account" sign-out-url="https://developers.google.com/_d/signout?continue=https%3A%2F%2Fdevelopers.google.com%2Frecaptcha%2Fdocs%2Fverify%3Fhl%3Dzh-cn" url="https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Frecaptcha%2Fdocs%2Fverify%3Fhl%3Dzh-cn&amp;prompt=select_account"><div class="ogb-wrapper ogb-si"><div class="devsite-devprofile-wrapper show"><devsite-feature-tooltip ack-key="AckViewSavedPagesPopoutDismiss" id="devsite-view-saved-pages" close-button-href="" close-button-text="查看" dismiss-button="" managed="" ready="" current-step="0" style="--devsite-popout-offset-x:32px;"><button class="devsite-devprofile-button" aria-controls="devsite-devprofile-popout" aria-expanded="false" aria-haspopup="true" aria-label="打开 Google 开发者资料" data-tooltip="Google Developer Profile"><svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM0 14C0 12.9 0.9 12 2 12C3.1 12 4 12.9 4 14C4 15.1 3.1 16 2 16C0.9 16 0 15.1 0 14Z" fill="#5F6368"></path></svg></button><span slot="popout-heading">Google 开发者资料</span><span slot="popout-contents">在此处查看您保存的页面并完成您的 Google 开发者资料设置。</span></devsite-feature-tooltip><div class="devsite-devprofile-popout" role="menu"></div></div><div class="gb_Ha gb_f gb_8a gb_Ia" id="gb"><div class="gb_sd gb_6a gb_hd" ng-non-bindable="" data-ogsr-up="" style="padding:0;height:auto;display:block"><div class="gb_Md" style="display:block"><div class="gb_Xc"></div><div class="gb_b gb_Hd gb_Tf gb_A"><div class="gb_g gb_5a gb_Tf gb_A"><a class="gb_d gb_xa gb_A devsite-top-button button" aria-label="Google Account: Richer Fu  
+(jewishfu@gmail.com)" href="https://accounts.google.com/SignOutOptions?hl=en&amp;continue=https://developers.google.com/_d/profile/ogb%3Fhl%3Dzh-cn&amp;ec=GBRAywI" role="button" tabindex="0" id="devsite-signin-btn"><img class="gb_n gbii" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/unnamed.jpg" srcset="https://lh3.googleusercontent.com/ogw/AGvuzYb2zPMv0_dYZ3YZKQBo2GdahtRDqUxt-4VSikib=s32-c-mo 1x, https://lh3.googleusercontent.com/ogw/AGvuzYb2zPMv0_dYZ3YZKQBo2GdahtRDqUxt-4VSikib=s64-c-mo 2x " alt="" aria-hidden="true" data-noaft=""></a></div></div></div><div style="overflow: hidden; position: absolute; top: 0px; visibility: hidden; width: 436px; z-index: 991; height: 0px; margin-top: 57px; right: 0px; margin-right: 4px;"></div></div></div></div></devsite-user>
+           
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    " style="transform: translate3d(0px, -48px, 0px);">
+    <div class="devsite-header-background">
+      
+        
+      
+      
+        <div class="devsite-doc-set-nav-row">
+          
+          
+            
+            
+  <devsite-tabs class="lower-tabs" connected="">
+
+    
+
+  <nav class="devsite-tabs-wrapper" aria-label="下面的标签页">
+      
+        
+          <tab>
+            
+    <a href="https://developers.google.com/recaptcha?hl=zh-cn" track-metadata-eventdetail="https://developers.google.com/recaptcha?hl=zh-cn" class="devsite-tabs-content gc-analytics-event " track-type="nav" track-metadata-position="nav - home" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 首页" track-name="home">
+    首页
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab active="">
+            
+    <a href="https://developers.google.com/recaptcha/intro?hl=zh-cn" track-metadata-eventdetail="https://developers.google.com/recaptcha/intro?hl=zh-cn" class="devsite-tabs-content gc-analytics-event " track-type="nav" track-metadata-position="nav - 指南" track-metadata-module="primary nav" aria-label="指南, selected" data-category="Site-Wide Custom Events" data-label="Tab: 指南" track-name="指南">
+    指南
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+        
+          <tab>
+            
+    <a href="https://developers.google.com/recaptcha/docs/faq?hl=zh-cn" track-metadata-eventdetail="https://developers.google.com/recaptcha/docs/faq?hl=zh-cn" class="devsite-tabs-content gc-analytics-event " track-type="nav" track-metadata-position="nav - 支持" track-metadata-module="primary nav" data-category="Site-Wide Custom Events" data-label="Tab: 支持" track-name="支持">
+    支持
+  
+    </a>
+  
+  
+          </tab>
+        
+      
+    <tab overflow-tab="" hidden=""><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#" class="devsite-icon devsite-icon-arrow-drop-down">更多</a><div class="devsite-tabs-overflow-menu" scrollbars="" hidden=""></div></tab></nav></devsite-tabs>
+
+          
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+</devsite-header>
+      <div class="devsite-book-nav-bg" fixed=""></div><devsite-book-nav scrollbars="" fixed="" style="top: 96px; max-height: 564px; --devsite-js-book-nav-y-offset:-48px;" user-scrolled="">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter
+            ">
+  <input type="text" placeholder="过滤条件" aria-label="输入文本以进行过滤" role="searchbox">
+  
+  <span class="filter-clear-button hidden" data-title="清除过滤条件" aria-label="清除过滤条件" role="button" tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" aria-label="侧边菜单">
+  <div class="devsite-mobile-header">
+    <button type="button" id="devsite-close-nav" class="devsite-header-icon-button button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Close navigation" aria-label="关闭导航栏">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/recaptcha?hl=zh-cn">
+    
+  <div class="devsite-product-logo-container" size="medium">
+  
+    
+      <img class="devsite-product-logo" alt="reCAPTCHA" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/recaptcha_48dp.png" srcset="" sizes="64px" loading="lazy">
+    
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/recaptcha?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Upper Header" data-value="1" track-type="globalNav" track-name="breadcrumb" track-metadata-position="1" track-metadata-eventdetail="reCAPTCHA">
+    
+          reCAPTCHA
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.com/recaptcha" class="devsite-nav-title gc-analytics-event
+              
+              " data-category="Site-Wide Custom Events" data-label="Tab: 首页" track-name="home" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      首页
+   </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.com/recaptcha/intro" class="devsite-nav-title gc-analytics-event devsite-nav-has-children" data-category="Site-Wide Custom Events" data-label="Tab: 指南" track-name="指南" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      指南
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward">
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+            
+<li class="devsite-nav-item">
+
+  
+  <a href="https://developers.google.com/recaptcha/docs/faq" class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              " data-category="Site-Wide Custom Events" data-label="Tab: 支持" track-name="支持" track-type="navMenu" track-metadata-eventdetail="globalMenu" track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip="">
+      支持
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward">
+    </span>
+    
+  
+  </a>
+  
+
+</li>
+
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom" role="navigation">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">开始使用</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/intro" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/intro" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/intro"><span class="devsite-nav-text" tooltip="">简介</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/versions" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/versions" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/versions"><span class="devsite-nav-text" tooltip="">选择类型</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/loading?hl=zh-cn" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/loading" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/loading"><span class="devsite-nav-text" tooltip="">正在加载 reCAPTCHA</span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">reCAPTCHA v3</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item
+           devsite-nav-new"><a href="https://developers.google.com/recaptcha/docs/v3" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/v3" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/v3"><span class="devsite-nav-text" tooltip="">reCAPTCHA v3</span><span class="devsite-nav-icon material-icons" data-icon="new" data-title="新！" aria-hidden="true"></span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">reCAPTCHA v2</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/display" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/display" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/display"><span class="devsite-nav-text" tooltip="">复选框</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/invisible" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/invisible" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/invisible"><span class="devsite-nav-text" tooltip="">不可见</span></a></li><li class="devsite-nav-item
+           devsite-nav-external"><a href="https://developer.android.com/training/safetynet/recaptcha.html" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: https://developer.android.com/training/safetynet/recaptcha.html" track-type="bookNav" track-name="click" track-metadata-eventdetail="https://developer.android.com/training/safetynet/recaptcha.html"><span class="devsite-nav-text" tooltip="">Android</span><span class="devsite-nav-icon material-icons" data-icon="external" data-title="外部" aria-hidden="true"></span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">服务器端验证</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/verify" class="devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/verify" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/verify"><span class="devsite-nav-text" tooltip="">验证用户的响应</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/domain_validation" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/domain_validation" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/domain_validation"><span class="devsite-nav-text" tooltip="">域名/<wbr>软件包名称验证</span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">管理控制台</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/settings" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/settings" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/settings"><span class="devsite-nav-text" tooltip="">设置</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/analytics" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/analytics" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/analytics"><span class="devsite-nav-text" tooltip="">Analytics</span></a></li></ul></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip="">其他设置</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/language" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Book nav link, pathname: /recaptcha/docs/language" track-type="bookNav" track-name="click" track-metadata-eventdetail="/recaptcha/docs/language"><span class="devsite-nav-text" tooltip="">语言代码</span></a></li></ul></li>
+          </ul>
+        
+        
+        
+          
+    
+  
+    
+  
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+        
+      </devsite-book-nav><div class="devsite-book-nav-blur" fixed="" style="--devsite-js-book-nav-scrollbar-width:8px;"></div><button class="devsite-book-nav-toggle" aria-haspopup="menu" fixed="" aria-label="隐藏侧边导航栏" data-title="隐藏侧边导航栏" aria-expanded="true"><span class="material-icons devsite-book-nav-toggle-icon"></span></button>
+      <section id="gc-wrapper" style="margin-top: 96px;">
+        <main role="main" class="devsite-main-content" has-book-nav="" has-sidebar="">
+          
+          
+          <div class="devsite-sidebar" fixed="" style="--devsite-js-sidebar-max-height:262px; --devsite-js-sidebar-max-width:156px; --devsite-js-sidebar-offset:-48px;">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav devsite-toc" role="navigation" aria-label="本页内容" depth="2" scrollbars="" visible=""><ul class="devsite-nav-list"><li class="devsite-nav-item devsite-nav-heading devsite-toc-toggle" role="heading" aria-level="2"><span class="devsite-nav-title"><span class="devsite-nav-text">本页内容</span></span></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#token_restrictions" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Right nav" data-value="0" track-type="navigation" track-name="rightNav" track-metadata-position="0" track-metadata-link-destination="#token_restrictions"><span class="devsite-nav-text" tooltip="">令牌限制</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#api_request" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Right nav" data-value="1" track-type="navigation" track-name="rightNav" track-metadata-position="1" track-metadata-link-destination="#api_request"><span class="devsite-nav-text" tooltip="">API 请求</span></a></li><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#api-response" class="devsite-nav-title gc-analytics-event devsite-nav-active" data-category="Site-Wide Custom Events" data-action="click" data-label="Right nav" data-value="2" track-type="navigation" track-name="rightNav" track-metadata-position="2" track-metadata-link-destination="#api-response"><span class="devsite-nav-text" tooltip="">API 响应</span></a><ul class="devsite-nav-list"><li class="devsite-nav-item"><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#error_code_reference" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Right nav" data-value="2.0" track-type="navigation" track-name="rightNav" track-metadata-position="2.0" track-metadata-link-destination="#error_code_reference"><span class="devsite-nav-text" tooltip="">错误代码参考</span></a></li></ul></li></ul></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav"></devsite-recommendations-sidebar>
+            </div>
+          </div>
+          
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article" has-bookmark="">
+  
+  
+  
+    <div class="devsite-banner devsite-banner-translated nocontent">
+      <div class="devsite-banner-message">
+        <div class="devsite-banner-message-text">
+          <img src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/translated.svg" class="devsite-banner-translated-image" alt="">
+          <span class="devsite-banner-translated-text">
+            
+            此页面由 <a href="https://cloud.google.com/translate/?hl=zh-cn">Cloud Translation API</a> 翻译。
+          </span>
+        </div>
+        
+        <a href="https://developers.google.com/recaptcha/docs/verify?hl=en" class="button gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Switch to English" browser-load="">Switch to English</a>
+      </div>
+    </div>
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation">
+    
+    
+    <ul class="devsite-breadcrumb-list" aria-label="面包屑导航">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+  <a href="https://developers.google.com/?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="1" track-type="globalNav" track-name="breadcrumb" track-metadata-position="1" track-metadata-eventdetail="">
+    
+        首页
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/products?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="2" track-type="globalNav" track-name="breadcrumb" track-metadata-position="2" track-metadata-eventdetail="">
+    
+        产品
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/recaptcha?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="3" track-type="globalNav" track-name="breadcrumb" track-metadata-position="3" track-metadata-eventdetail="reCAPTCHA">
+    
+        reCAPTCHA
+      
+  </a>
+  
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+  <a href="https://developers.google.com/recaptcha/intro?hl=zh-cn" class="devsite-breadcrumb-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Breadcrumbs" data-value="4" track-type="globalNav" track-name="breadcrumb" track-metadata-position="4" track-metadata-eventdetail="">
+    
+        指南
+      
+  </a>
+  
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header"><div class="devsite-thumb-rating" role="form" aria-labelledby="devsite-thumb-label-header" tabindex="0"><div class="devsite-thumb-label" id="devsite-thumb-label-header">该内容对您有帮助吗？</div><div class="devsite-thumbs"><button class="devsite-thumb devsite-thumb-up" data-title="有帮助" aria-label="有帮助"><svg class="devsite-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7h-6.31l0.95-4.57l0.03-0.32c0-0.41-0.17-0.79-0.44-1.06L14.17,0c0,0-7.09,6.85-7.17,7H2v13h16 c0.83,0,1.54-0.5,1.84-1.22l3.02-7.05C22.95,11.5,23,11.26,23,11V9C23,7.9,22.1,7,21,7z M7,18H4V9h3V18z M21,11l-3,7H9V8l4.34-4.34 L12,9h9V11z"></path></svg></button><button class="devsite-thumb devsite-thumb-down" data-title="没有帮助" aria-label="没有帮助"><svg class="devsite-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3,17h6.31l-0.95,4.57l-0.03,0.32c0,0.41,0.17,0.79,0.44,1.06L9.83,24c0,0,7.09-6.85,7.17-7h5V4H6 C5.17,4,4.46,4.5,4.16,5.22l-3.02,7.05C1.05,12.5,1,12.74,1,13v2C1,16.1,1.9,17,3,17z M17,6h3v9h-3V6z M3,13l3-7h9v10l-4.34,4.34 L12,15H3V13z"></path></svg></button></div></div></devsite-thumb-rating>
+  
+    
+  </div>
+  <h1 class="devsite-page-title">
+    验证用户的响应
+  
+</h1><devsite-feature-tooltip ack-key="AckCollectionsBookmarkTooltipDismiss" analytics-category="Site-Wide Custom Events" analytics-action-show="Callout Profile displayed" analytics-action-close="Callout Profile dismissed" analytics-label="Create Collection Callout" class="devsite-page-bookmark-tooltip nocontent inline-block" dismiss-button="true" id="devsite-collections-dropdown" dismiss-button-text="关闭" close-button-text="知道了" ready="" current-step="0" style="--devsite-popout-offset-x:32px;">
+
+        
+        <devsite-bookmark class="show"><devsite-dropdown-list ellipsis="" checkboxes="" fetchingitems="true" writable="" additemtext="新集合" ready="" style="--devsite-popout-offset-x:0px;"><span class="material-icons bookmark-icon" slot="toggle">bookmark_border</span></devsite-dropdown-list></devsite-bookmark>
+
+        <span slot="popout-heading">
+          
+          使用集合让一切井井有条
+        </span>
+        <span slot="popout-contents">
+          
+          根据您的偏好保存内容并对其进行分类。
+        </span>
+      </devsite-feature-tooltip>
+    
+  
+
+  <devsite-toc class="devsite-nav devsite-toc-embedded" depth="2" devsite-toc-embedded="" visible=""><ul class="devsite-nav-list"><li class="devsite-nav-item devsite-nav-heading devsite-toc-toggle" role="heading" aria-level="2"><span class="devsite-nav-title"><span class="devsite-nav-text">本页内容</span></span><button type="button" title="展开/收起内容" class="devsite-nav-show-all button-transparent material-icons"></button></li><li class="devsite-nav-item" visible=""><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#token_restrictions" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Embedded nav" data-value="0" track-type="navigation" track-name="embeddedNav" track-metadata-position="0" track-metadata-link-destination="#token_restrictions"><span class="devsite-nav-text" tooltip="">令牌限制</span></a></li><li class="devsite-nav-item" visible=""><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#api_request" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Embedded nav" data-value="1" track-type="navigation" track-name="embeddedNav" track-metadata-position="1" track-metadata-link-destination="#api_request"><span class="devsite-nav-text" tooltip="">API 请求</span></a></li><li class="devsite-nav-item" visible=""><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#api-response" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Embedded nav" data-value="2" track-type="navigation" track-name="embeddedNav" track-metadata-position="2" track-metadata-link-destination="#api-response"><span class="devsite-nav-text" tooltip="">API 响应</span></a><ul class="devsite-nav-list"><li class="devsite-nav-item" visible=""><a href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn#error_code_reference" class="devsite-nav-title gc-analytics-event" data-category="Site-Wide Custom Events" data-action="click" data-label="Embedded nav" data-value="2.0" track-type="navigation" track-name="embeddedNav" track-metadata-position="2.0" track-metadata-link-destination="#error_code_reference"><span class="devsite-nav-text" tooltip="">错误代码参考</span></a></li></ul></li><li class="devsite-toc-toggle"><button type="button" class="button-flat devsite-nav-more-items material-icons" track-type="navigation" track-name="embeddedNavExpand" title="展开/收起内容"></button></li></ul></devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent"></devsite-recommendations-dropdown>
+    
+  
+
+  
+
+
+
+
+
+
+<div class="devsite-article-body clearfix
+  ">
+
+  
+    
+  
+
+  
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>本页面介绍了如何从应用后端验证用户对 reCAPTCHA 质询的响应。</p>
+
+<p>对于 Web 用户，您可以通过以下三种方式之一获取用户的响应令牌：</p>
+
+<ul>
+<li><code dir="ltr" translate="no">g-recaptcha-response</code> POST 参数（用户在您的网站上提交表单时）</li>
+<li><a href="https://developers.google.com/recaptcha/docs/display?hl=zh-cn#js_api"><code dir="ltr" translate="no">grecaptcha.getResponse(opt_widget_id)</code></a>（在用户完成 reCAPTCHA 验证后）</li>
+<li>作为<a href="https://developers.google.com/recaptcha/docs/display?hl=zh-cn#render_param">回调函数</a>的字符串参数（如果在 <code dir="ltr" translate="no">g-recaptcha</code> 标记属性或 <code dir="ltr" translate="no">grecaptcha.render</code> 方法中的回调参数中指定了 <code dir="ltr" translate="no">data-callback</code>）</li>
+</ul>
+
+<p>对于 Android 库用户，如果状态返回成功，您可以调用 <a href="https://developers.google.com/android/reference/com/google/android/gms/safetynet/SafetyNetApi.RecaptchaTokenResult.html?hl=zh-cn#getTokenResult()">SafetyNetApi.RecaptchaTokenResult.getTokenResult()</a> 方法来获取响应令牌。</p>
+
+<h2 data-text="令牌限制" id="token_restrictions" role="presentation"><span class="devsite-heading" role="heading" aria-level="2">令牌限制</span><button type="button" class="devsite-heading-link button-flat material-icons" aria-label="复制指向此部分的链接：令牌限制" data-title="复制指向此部分的链接：令牌限制" data-id="token_restrictions"></button></h2>
+
+<p>每个 reCAPTCHA 用户响应令牌的有效期均为两分钟，并且只能进行一次验证<em></em>，以防止重放攻击。如果您需要新令牌，可以重新运行 reCAPTCHA 验证。</p>
+
+<p>获取响应令牌后，您需要使用以下 API 通过 reCAPTCHA 在两分钟内对其进行验证，以确保令牌有效。</p>
+
+<h2 data-text="API 请求" id="api_request" role="presentation"><span class="devsite-heading" role="heading" aria-level="2">API 请求</span><button type="button" class="devsite-heading-link button-flat material-icons" aria-label="复制指向此部分的链接：API 请求" data-title="复制指向此部分的链接：API 请求" data-id="api_request"></button></h2>
+
+<p>网址：https://www.google.com/recaptcha/api/siteverify
+方法：POST</p>
+
+<div class="devsite-table-wrapper"><table>
+  <tbody><tr align="left">
+    <th>POST 参数</th>
+    <th>说明</th>
+  </tr>
+  <tr>
+    <td>secret</td>
+    <td>必需。您的网站与 reCAPTCHA 共用的密钥。</td>
+  </tr>
+  <tr>
+    <td>条回复</td>
+    <td>必需。在网站上的 reCAPTCHA 客户端集成提供的用户响应令牌。</td>
+  </tr>
+  <tr>
+    <td>遥控器</td>
+    <td>（可选）用户的 IP 地址。</td>
+  </tr>
+</tbody></table></div>
+
+<h2 data-text="API 响应" id="api-response" role="presentation"><span class="devsite-heading" role="heading" aria-level="2">API 响应</span><button type="button" class="devsite-heading-link button-flat material-icons" aria-label="复制指向此部分的链接：API 响应" data-title="复制指向此部分的链接：API 响应" data-id="api-response"></button></h2>
+
+<p>响应是一个 JSON 对象：</p>
+<devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="操作按钮"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="深色代码主题背景" data-title="深色代码主题背景"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="浅色代码主题背景" data-title="浅色代码主题背景"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="复制代码示例" data-title="复制代码示例"></button></div><pre class="lang-json" translate="no" dir="ltr" is-upgraded=""><code dir="ltr"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"success"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">|</span><span class="kwd">false</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"challenge_ts"</span><span class="pun">:</span><span class="pln"> timestamp</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="pun">//</span><span class="pln"> timestamp of the challenge load </span><span class="pun">(</span><span class="pln">ISO format yyyy</span><span class="pun">-</span><span class="pln">MM</span><span class="pun">-</span><span class="pln">dd</span><span class="str">'T'</span><span class="pln">HH</span><span class="pun">:</span><span class="pln">mm</span><span class="pun">:</span><span class="pln">ssZZ</span><span class="pun">)</span><span class="pln"><br>&nbsp; </span><span class="str">"hostname"</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">//</span><span class="pln"> the hostname of the site where the reCAPTCHA was solved<br>&nbsp; </span><span class="str">"error-codes"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[...]</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">//</span><span class="pln"> optional<br></span><span class="pun">}</span><span class="pln"><br></span></code></pre></devsite-code>
+<p>对于 reCAPTCHA Android：</p>
+<devsite-code data-copy-event-label=""><div class="devsite-code-buttons-container" role="group" aria-label="操作按钮"><button type="button" class="gc-analytics-event material-icons devsite-icon-code-dark devsite-toggle-dark" data-category="Site-Wide Custom Events" data-label="Dark Code Toggle" track-type="exampleCode" track-name="darkCodeToggle" aria-label="深色代码主题背景" data-title="深色代码主题背景"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-code-light devsite-toggle-light" data-category="Site-Wide Custom Events" data-label="Light Code Toggle" track-type="exampleCode" track-name="lightCodeToggle" aria-label="浅色代码主题背景" data-title="浅色代码主题背景"></button><button type="button" class="gc-analytics-event material-icons devsite-icon-copy" data-category="Site-Wide Custom Events" data-label="Click To Copy" track-type="exampleCode" track-name="clickToCopy" aria-label="复制代码示例" data-title="复制代码示例"></button></div><pre class="lang-json" translate="no" dir="ltr" is-upgraded=""><code dir="ltr"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"success"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">|</span><span class="kwd">false</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"challenge_ts"</span><span class="pun">:</span><span class="pln"> timestamp</span><span class="pun">,</span><span class="pln"> &nbsp;</span><span class="pun">//</span><span class="pln"> timestamp of the challenge load </span><span class="pun">(</span><span class="pln">ISO format yyyy</span><span class="pun">-</span><span class="pln">MM</span><span class="pun">-</span><span class="pln">dd</span><span class="str">'T'</span><span class="pln">HH</span><span class="pun">:</span><span class="pln">mm</span><span class="pun">:</span><span class="pln">ssZZ</span><span class="pun">)</span><span class="pln"><br>&nbsp; </span><span class="str">"apk_package_name"</span><span class="pun">:</span><span class="pln"> string</span><span class="pun">,</span><span class="pln"> </span><span class="pun">//</span><span class="pln"> the package name of the app where the reCAPTCHA was solved<br>&nbsp; </span><span class="str">"error-codes"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[...]</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="pun">//</span><span class="pln"> optional<br></span><span class="pun">}</span><span class="pln"><br></span></code></pre></devsite-code>
+<h3 data-text="错误代码参考" id="error_code_reference" role="presentation"><span class="devsite-heading" role="heading" aria-level="3">错误代码参考</span><button type="button" class="devsite-heading-link button-flat material-icons" aria-label="复制指向此部分的链接：错误代码参考" data-title="复制指向此部分的链接：错误代码参考" data-id="error_code_reference"></button></h3>
+
+<div class="devsite-table-wrapper"><table>
+  <tbody><tr align="left">
+    <th>错误代码</th>
+    <th>说明</th>
+  </tr>
+  <tr>
+    <td>缺少输入密钥</td>
+    <td>Secret 参数缺失。</td>
+  </tr>
+  <tr>
+    <td>无效输入密钥</td>
+    <td>Secret 参数无效或格式错误。</td>
+  </tr>
+  <tr>
+    <td>缺少输入-响应</td>
+    <td>缺少响应参数。</td>
+  </tr>
+  <tr>
+    <td>输入-响应无效</td>
+    <td>响应参数无效或格式错误。</td>
+  </tr>
+  <tr>
+    <td>错误请求</td>
+    <td>请求无效或格式错误。</td>
+  </tr>
+  <tr>
+    <td>超时或重复</td>
+    <td>响应不再有效：要么太旧了，要么之前使用过。</td>
+  </tr>
+</tbody></table></div>
+
+  
+
+  
+
+  
+</div>
+
+  
+
+  
+    
+      <devsite-recommendations display="in-page" hidden="" yield="">
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer"><div class="devsite-thumb-rating" role="form" aria-labelledby="devsite-thumb-label-footer" tabindex="0"><div class="devsite-thumb-label" id="devsite-thumb-label-footer">该内容对您有帮助吗？</div><div class="devsite-thumbs"><button class="devsite-thumb devsite-thumb-up" data-title="有帮助" aria-label="有帮助"><svg class="devsite-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21,7h-6.31l0.95-4.57l0.03-0.32c0-0.41-0.17-0.79-0.44-1.06L14.17,0c0,0-7.09,6.85-7.17,7H2v13h16 c0.83,0,1.54-0.5,1.84-1.22l3.02-7.05C22.95,11.5,23,11.26,23,11V9C23,7.9,22.1,7,21,7z M7,18H4V9h3V18z M21,11l-3,7H9V8l4.34-4.34 L12,9h9V11z"></path></svg></button><button class="devsite-thumb devsite-thumb-down" data-title="没有帮助" aria-label="没有帮助"><svg class="devsite-thumb-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3,17h6.31l-0.95,4.57l-0.03,0.32c0,0.41,0.17,0.79,0.44,1.06L9.83,24c0,0,7.09-6.85,7.17-7h5V4H6 C5.17,4,4.46,4.5,4.16,5.22l-3.02,7.05C1.05,12.5,1,12.74,1,13v2C1,16.1,1.9,17,3,17z M17,6h3v9h-3V6z M3,13l3-7h9v10l-4.34,4.34 L12,15H3V13z"></path></svg></button></div></div></devsite-thumb-rating>
+  
+       
+    
+    
+      
+    
+  
+
+  
+  
+</article>
+
+
+<devsite-content-footer class="nocontent">
+  <p>如未另行说明，那么本页面中的内容已根据<a href="https://creativecommons.org/licenses/by/4.0/">知识共享署名 4.0 许可</a>获得了许可，并且代码示例已根据 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 许可</a>获得了许可。有关详情，请参阅 <a href="https://developers.google.com/site-policies?hl=zh-cn">Google 开发者网站政策</a>。Java 是 Oracle 和/或其关联公司的注册商标。</p>
+  <p>最后更新时间 (UTC)：2023-02-14。</p>
+</devsite-content-footer>
+
+
+<devsite-notification>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  <template class="devsite-thumb-rating-down-categories"></template>
+  <template class="devsite-thumb-rating-up-categories"></template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent" aria-label="页脚链接">
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">关注</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://googledevelopers.blogspot.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)">
+            
+          
+            博客
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://twitter.com/googledevs" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)">
+            
+          
+            Twitter
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.youtube.com/user/GoogleDevelopers" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)">
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">计划</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.womentechmakers.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)">
+            
+          
+            Women Techmakers
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/gdg" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/experts" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/accelerators" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)">
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developers.google.com/community/gdsc" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)">
+            
+              
+              
+            
+          
+            Google Developer Student Clubs
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">开发者控制台</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.developers.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 1)">
+            
+          
+            Google API Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.cloud.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 2)">
+            
+          
+            Google Cloud Platform Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/apps/publish" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 3)">
+            
+          
+            Google Play 管理中心
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.firebase.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 4)">
+            
+          
+            Firebase Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://console.actions.google.com/" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 5)">
+            
+          
+            Actions on Google Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cast.google.com/publish" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 6)">
+            
+          
+            Cast SDK Developer Console
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://chrome.google.com/webstore/developer/dashboard" class="devsite-footer-linkbox-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Link (index 7)">
+            
+              
+              
+            
+          
+            Chrome Web Store Dashboard
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent">
+  
+  
+  <nav class="devsite-footer-sites" aria-label="其他 Google Developers 网站">
+    <a href="https://developers.google.com/?hl=zh-cn" class="devsite-footer-sites-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link">
+      <picture>
+        <source srcset="https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/lockup-google-for-developers-dark-theme.svg" media="(prefers-color-scheme: none)" class="devsite-dark-theme" loading="lazy" alt="Google Developers">
+        <img class="devsite-footer-sites-logo" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/lockup-google-for-developers.svg" loading="lazy" alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.android.com/?hl=zh-cn" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Android Link">
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developer.chrome.com/home" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Chrome Link">
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://firebase.google.com/?hl=zh-cn" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Firebase Link">
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://cloud.google.com/?hl=zh-cn" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer Google Cloud Platform Link">
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="https://developers.google.com/products?hl=zh-cn" class="devsite-footer-sites-link
+                  gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Footer All products Link">
+          所有产品
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="实用程序链接">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://developers.google.com/terms/site-terms?hl=zh-cn" data-category="Site-Wide Custom Events" data-label="Footer Terms link">
+          条款
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://policies.google.com/privacy?hl=zh-cn" data-category="Site-Wide Custom Events" data-label="Footer Privacy link">
+          隐私权政策
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 devsite-footer-utility-button">
+        
+        <span class="devsite-footer-utility-description">订阅 Google Developers 简报</span>
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event" href="https://developers.google.com/newsletter/subscribe?hl=zh-cn" data-category="Site-Wide Custom Events" data-label="Footer Subscribe link">
+          订阅
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector aria-label="选择您的语言偏好设置。">
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en" href="https://developers.google.com/recaptcha/docs/verify">English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id" href="https://developers.google.com/recaptcha/docs/verify?hl=id">Bahasa Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de" href="https://developers.google.com/recaptcha/docs/verify?hl=de">Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es" href="https://developers.google.com/recaptcha/docs/verify?hl=es">Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es-419" href="https://developers.google.com/recaptcha/docs/verify?hl=es-419">Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr" href="https://developers.google.com/recaptcha/docs/verify?hl=fr">Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it" href="https://developers.google.com/recaptcha/docs/verify?hl=it">Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl" href="https://developers.google.com/recaptcha/docs/verify?hl=pl">Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt-br" href="https://developers.google.com/recaptcha/docs/verify?hl=pt-br">Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi" href="https://developers.google.com/recaptcha/docs/verify?hl=vi">Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr" href="https://developers.google.com/recaptcha/docs/verify?hl=tr">Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru" href="https://developers.google.com/recaptcha/docs/verify?hl=ru">Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he" href="https://developers.google.com/recaptcha/docs/verify?hl=he">עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar" href="https://developers.google.com/recaptcha/docs/verify?hl=ar">العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa" href="https://developers.google.com/recaptcha/docs/verify?hl=fa">فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi" href="https://developers.google.com/recaptcha/docs/verify?hl=hi">हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn" href="https://developers.google.com/recaptcha/docs/verify?hl=bn">বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th" href="https://developers.google.com/recaptcha/docs/verify?hl=th">ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh-cn" aria-current="true" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-cn">中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh-tw" href="https://developers.google.com/recaptcha/docs/verify?hl=zh-tw">中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja" href="https://developers.google.com/recaptcha/docs/verify?hl=ja">日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko" href="https://developers.google.com/recaptcha/docs/verify?hl=ko">한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel style="height: auto;"></devsite-panel>
+        
+      </section></section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar style="bottom: 0px;">
+</devsite-snackbar>
+    <devsite-tooltip></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics analytics-iframe="" enable-ga4="">
+      
+        <script type="application/json" analytics="">[{&#34;dimensions&#34;: {&#34;dimension5&#34;: &#34;zh-cn&#34;, &#34;dimension11&#34;: true, &#34;dimension6&#34;: &#34;zh-cn&#34;, &#34;dimension3&#34;: false, &#34;dimension4&#34;: &#34;reCAPTCHA&#34;, &#34;dimension1&#34;: &#34;Signed In&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}}, {&#34;dimensions&#34;: {&#34;dimension5&#34;: &#34;zh-cn&#34;, &#34;dimension11&#34;: true, &#34;dimension6&#34;: &#34;zh-cn&#34;, &#34;dimension3&#34;: false, &#34;dimension4&#34;: &#34;reCAPTCHA&#34;, &#34;dimension1&#34;: &#34;Signed In&#34;}, &#34;gaid&#34;: &#34;UA-18267335-2&#34;, &#34;metrics&#34;: {&#34;ratings_count&#34;: &#34;metric2&#34;, &#34;ratings_value&#34;: &#34;metric1&#34;}}]</script>
+<script type="application/json" tag-management="" gtm="">{&#34;ga4&#34;: [&#34;G-272J68FCRF&#34;], &#34;ga4p&#34;: [&#34;G-272J68FCRF&#34;], &#34;gtm&#34;: [], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;True&#34;, &#34;requested&#34;: &#34;zh-cn&#34;, &#34;served&#34;: &#34;zh-cn&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;reCAPTCHA&#34;, &#34;signedIn&#34;: &#34;True&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}, &#34;tags&#34;: []}</script>
+      
+    <iframe sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/analytics-iframe.html"></iframe></devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    <script nonce="">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/js/app_loader.js', '[1,"zh_cn",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c","https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vbad4fd6eb290ad214822e7a397f826be8dbcc36ca2a922ba48f41fb14286829c/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,40,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,154,155,156,157,158,159,161,163,164,165,168,169,170,172,173,179,180,182,183,186,190,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Profiles__enable_public_developer_profiles","Search__enable_dynamic_content_confidential_banner","Profiles__enable_profile_collections","Profiles__require_profile_eligibility_for_signin","Profiles__enable_developer_profiles_callout","MiscFeatureFlags__developers_footer_dark_image","Profiles__enable_suggested_interests","MiscFeatureFlags__devpanel_url","ContentExcellence__enable_googler_button","Search__enable_devsite_serp","Badges__enable_delete_badges","AuthorPageInsights__enable_author_page_insights","MiscFeatureFlags__developers_footer_image","MiscFeatureFlags__enable_tls_version_for_gaia_calls","Search__enable_suggestions_from_borg","Cloud__enable_cloud_dlp_service","Profiles__enable_profile_notifications_ui","Badges__enable_drag_and_drop_badges","Cloud__enable_free_trial_personalization_migration","Cloud__enable_free_trial_server_call","BookNav__enable_book_nav_filtering","MiscFeatureFlags__emergency_css","Profiles__enable_developer_profiles_interests","Profiles__enable_developer_profiles_dashboard_recommendations","Badges__enable_hide_badges","Profiles__enable_profile_communities","Cloud__enable_cloud_facet_chat","Profiles__enable_searchable_interests","Cloud__enable_cloudx_experiment_ids","Localization__enable_locale_redirects","Profiles__enable_page_saving","Cloud__enable_cloud_shell","Significatio__enable_by_tenant","Analytics__enable_ga4_analytics","Significatio__enable_footprints","Search__enable_page_map","Search__enable_faceted_search","Profiles__enable_release_notes_notifications","Cloud__enable_cloud_shell_fte_user_flow","Significatio__enable_experiment_id_caching","Search__enable_acl_suggestions","Experiments__reqs_query_experiments","SignIn__enable_auto_signin_oauth","Experiments__enable_experiments","BookNav__enable_collapsible_book_nav","Cloud__enable_cloudx_ping","OpenInReplit__enable_replit"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1]')
+  
+</script>
+    <devsite-a11y-announce aria-live="assertive" aria-atomic="true"></devsite-a11y-announce>
+  
+<iframe id="hfcr" src="./验证用户的响应  _  reCAPTCHA  _  Google for Developers_files/RotateCookiesPage.html" style="display: none;"></iframe></body></html>
